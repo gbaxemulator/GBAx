@@ -18,9 +18,14 @@ mkdir -p "$stage" "$dist"
 ditto "$build/qt/GBAx.app" "$stage/GBAx.app"
 app="$stage/GBAx.app"
 python3 "$root/tools/release/release.py" resources "$app/Contents/Resources" \
-  --notices "$(brew --prefix sdl2)" --notices "$(brew --prefix libzip)" \
+  --notices "$(brew --prefix sdl2)" --notices "$(brew --prefix sdl3)" --notices "$(brew --prefix libzip)" \
   --notices "$(brew --prefix libpng)" --notices "$(brew --prefix sqlite)" --notices "$(brew --prefix zlib)"
 deploy_options=(-always-overwrite -codesign=-)
+# Homebrew SDL2 is SDL2-compat. SDL3 is loaded with dlopen, so macdeployqt's
+# linked-library scanner cannot discover it. Keep it beside the SDL2 dylib.
+sdl3="$app/Contents/Frameworks/libSDL3.dylib"
+mkdir -p "$app/Contents/Frameworks"
+cp -L "$(brew --prefix sdl3)/lib/libSDL3.dylib" "$sdl3"
 suffix='-unsigned'
 if [[ "${GBAX_SIGN_MACOS:-false}" == true ]]; then
   : "${APPLE_CERTIFICATE_P12_BASE64:?Missing signing certificate}"
@@ -64,12 +69,22 @@ fi
 echo "Deploying and signing the Mac app bundle (10 minute limit)"
 python3 -c 'import subprocess,sys; subprocess.run(sys.argv[1:], check=True, timeout=600)' \
   "$QT_ROOT_DIR/bin/macdeployqt" "$app" "${deploy_options[@]}"
-if [[ -z "$suffix" ]]; then codesign --verify --deep --strict --verbose=2 "$app"; fi
+# Sign the dynamically loaded library explicitly, then reseal the app bundle.
+if [[ -z "$suffix" ]]; then
+  codesign --force --sign "$APPLE_SIGNING_IDENTITY" --options runtime --timestamp "$sdl3"
+  codesign --force --sign "$APPLE_SIGNING_IDENTITY" --options runtime --timestamp \
+    --preserve-metadata=identifier,entitlements "$app"
+else
+  codesign --force --sign - "$sdl3"
+  codesign --force --sign - --preserve-metadata=identifier,entitlements "$app"
+fi
+codesign --verify --deep --strict --verbose=2 "$app"
 # Check the actual deployed bundle before turning it into a disk image.
 echo "Checking the deployed Mac runtime (2 minute limit)"
 python3 "$root/tools/release/check-macos-runtime.py" \
   "$app/Contents/MacOS/GBAx" "$dist/macos-$arch-package-check.json"
 lipo -verify_arch "$arch" "$app/Contents/MacOS/GBAx"
+lipo -verify_arch "$arch" "$sdl3"
 ln -s /Applications "$stage/Applications"
 version="$(python3 "$root/tools/release/release.py" version)"
 dmg="$dist/GBAx-$version-macos-$arch$suffix.dmg"

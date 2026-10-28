@@ -115,7 +115,7 @@ jobs:
           arch: clang_64
           cache: true
       - name: Install native dependencies
-        run: brew install cmake ninja pkg-config sdl2 libzip libpng sqlite zlib
+        run: brew install cmake ninja pkg-config sdl2 sdl3 libzip libpng sqlite zlib
       - name: Build, package and test Mac DMG
         env:
           GBAX_SIGN_MACOS: ${{ inputs.sign_macos }}
