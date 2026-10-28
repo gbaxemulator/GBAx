@@ -28,6 +28,9 @@ Copy-Item "$VcpkgRoot/installed/x64-windows/bin/*.dll" $stage
 Run 'python' @("$PSScriptRoot/release.py", 'resources', $stage,
     '--notices', "$VcpkgRoot/installed/x64-windows/share")
 Run "$QtRoot/bin/windeployqt.exe" @('--release', '--compiler-runtime', '--dir', $stage, "$stage/GBAx.exe")
+# windeployqt includes qwindows by default, but the package check uses offscreen.
+Copy-Item "$QtRoot/plugins/platforms/qoffscreen.dll" "$stage/platforms/"
+
 $oldPluginPath = $env:QT_PLUGIN_PATH
 $oldPlatform = $env:QT_QPA_PLATFORM
 try {
@@ -44,6 +47,10 @@ try {
     $process.WaitForExit()
     if ($process.ExitCode -ne 0) { throw 'Packaged Windows application failed its runtime check' }
 } finally {
+    foreach ($report in @('windows-package-check.json', 'windows-package-check.stderr.txt')) {
+        $reportPath = Join-Path $OutputDirectory $report
+        if (Test-Path $reportPath) { Get-Content $reportPath }
+    }
     $env:QT_PLUGIN_PATH = $oldPluginPath
     $env:QT_QPA_PLATFORM = $oldPlatform
 }
