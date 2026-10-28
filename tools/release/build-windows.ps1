@@ -33,10 +33,15 @@ $oldPlatform = $env:QT_QPA_PLATFORM
 try {
     Remove-Item Env:QT_PLUGIN_PATH -ErrorAction SilentlyContinue
     $env:QT_QPA_PLATFORM = 'offscreen'
-    # Start-Process waits for a GUI-subsystem executable and exposes its exit code.
-    $process = Start-Process -FilePath "$stage/GBAx.exe" -ArgumentList '--package-check' -Wait -PassThru `
+    # Wait for the GUI executable with a deadline, so a startup dialog or hang fails CI.
+    $process = Start-Process -FilePath "$stage/GBAx.exe" -ArgumentList '--package-check' -PassThru `
         -RedirectStandardOutput "$OutputDirectory/windows-package-check.json" `
         -RedirectStandardError "$OutputDirectory/windows-package-check.stderr.txt"
+    if (!$process.WaitForExit(120000)) {
+        Stop-Process -Id $process.Id -Force -ErrorAction SilentlyContinue
+        throw 'Packaged Windows application did not finish its runtime check within two minutes'
+    }
+    $process.WaitForExit()
     if ($process.ExitCode -ne 0) { throw 'Packaged Windows application failed its runtime check' }
 } finally {
     $env:QT_PLUGIN_PATH = $oldPluginPath
