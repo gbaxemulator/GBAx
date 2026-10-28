@@ -20,7 +20,7 @@ app="$stage/GBAx.app"
 python3 "$root/tools/release/release.py" resources "$app/Contents/Resources" \
   --notices "$(brew --prefix sdl2)" --notices "$(brew --prefix libzip)" \
   --notices "$(brew --prefix libpng)" --notices "$(brew --prefix sqlite)" --notices "$(brew --prefix zlib)"
-sign_options=()
+deploy_options=(-always-overwrite)
 suffix='-unsigned'
 if [[ "${GBAX_SIGN_MACOS:-false}" == true ]]; then
   : "${APPLE_CERTIFICATE_P12_BASE64:?Missing signing certificate}"
@@ -58,10 +58,10 @@ PY
     security delete-keychain "$keychain" >/dev/null 2>&1 || true
     rm -rf -- "$signing_dir"
   }
-  sign_options=("-sign-for-notarization=$APPLE_SIGNING_IDENTITY")
+  deploy_options+=("-sign-for-notarization=$APPLE_SIGNING_IDENTITY")
   suffix=''
 fi
-"$QT_ROOT_DIR/bin/macdeployqt" "$app" -always-overwrite "${sign_options[@]}"
+"$QT_ROOT_DIR/bin/macdeployqt" "$app" "${deploy_options[@]}"
 if [[ -z "$suffix" ]]; then codesign --verify --deep --strict --verbose=2 "$app"; fi
 # Check the actual deployed bundle before turning it into a disk image.
 env -u QT_PLUGIN_PATH -u DYLD_LIBRARY_PATH QT_QPA_PLATFORM=offscreen \
