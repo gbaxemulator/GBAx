@@ -69,13 +69,18 @@ fi
 echo "Deploying and signing the Mac app bundle (10 minute limit)"
 python3 -c 'import subprocess,sys; subprocess.run(sys.argv[1:], check=True, timeout=600)' \
   "$QT_ROOT_DIR/bin/macdeployqt" "$app" "${deploy_options[@]}"
-# Sign the dynamically loaded library explicitly, then reseal the app bundle.
+# Qt may also deploy the library under its versioned install name. Sign every
+# SDL3 copy before resealing the app bundle.
 if [[ -z "$suffix" ]]; then
-  codesign --force --sign "$APPLE_SIGNING_IDENTITY" --options runtime --timestamp "$sdl3"
+  for runtime in "$app/Contents/Frameworks/"libSDL3*.dylib; do
+    codesign --force --sign "$APPLE_SIGNING_IDENTITY" --options runtime --timestamp "$runtime"
+  done
   codesign --force --sign "$APPLE_SIGNING_IDENTITY" --options runtime --timestamp \
     --preserve-metadata=identifier,entitlements "$app"
 else
-  codesign --force --sign - "$sdl3"
+  for runtime in "$app/Contents/Frameworks/"libSDL3*.dylib; do
+    codesign --force --sign - "$runtime"
+  done
   codesign --force --sign - --preserve-metadata=identifier,entitlements "$app"
 fi
 codesign --verify --deep --strict --verbose=2 "$app"
