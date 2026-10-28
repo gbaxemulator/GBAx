@@ -1,0 +1,73 @@
+name: Prepare a verified desktop release draft
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: Successful Build desktop downloads run ID
+        required: true
+        type: string
+  push:
+    branches: [main]
+    paths: ['.github/workflows/draft-candidate.yml']
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: desktop-candidate-${{ inputs.run_id || '40705365475' }}
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+      BUILD_RUN_ID: ${{ inputs.run_id || '40705365475' }}
+    steps:
+      - name: Verify the completed native build
+        id: build
+        run: |
+          [[ "$BUILD_RUN_ID" =~ ^[0-9]+$ ]]
+          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$BUILD_RUN_ID" > "$RUNNER_TEMP/build.json"
+          python3 - <<'PY'
+          import json, os, re
+          from pathlib import Path
+          run = json.loads((Path(os.environ['RUNNER_TEMP']) / 'build.json').read_text())
+          assert run['status'] == 'completed' and run['conclusion'] == 'success', 'Native build has not passed'
+          assert run['path'] == '.github/workflows/release.yml', 'Unexpected build workflow'
+          assert run['head_repository']['full_name'].lower() == os.environ['GITHUB_REPOSITORY'].lower(), 'Unexpected source repository'
+          assert re.fullmatch('[0-9a-f]{40}', run['head_sha']), 'Invalid source SHA'
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('sha=' + run['head_sha'] + '\n')
+          PY
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ steps.build.outputs.sha }}
+      - name: Download and recheck the verified package set
+        run: |
+          gh run download "$BUILD_RUN_ID" --repo "$GITHUB_REPOSITORY" --name GBAx-website-downloads --dir dist
+          python3 tools/release/verify-release.py dist
+      - name: Create or refresh this build's unpublished candidate
+        env:
+          SOURCE_SHA: ${{ steps.build.outputs.sha }}
+        run: |
+          version="$(python3 tools/release/release.py version)"
+          tag="v$version-candidate-$BUILD_RUN_ID"
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json isDraft,targetCommitish > "$RUNNER_TEMP/release.json" 2>/dev/null; then
+            python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          release = json.loads((Path(os.environ['RUNNER_TEMP']) / 'release.json').read_text())
+          assert release['isDraft'] is True, 'Refusing to alter a published release'
+          assert release['targetCommitish'] == os.environ['SOURCE_SHA'], 'Candidate source does not match'
+          PY
+            gh release upload "$tag" --repo "$GITHUB_REPOSITORY" --clobber dist/*
+          else
+            gh release create "$tag" --repo "$GITHUB_REPOSITORY" --draft --target "$SOURCE_SHA" \
+              --title "GBAx $version desktop test candidate" --notes-file tools/release/RELEASE_TEMPLATE.md dist/*
+          fi
+          url="$(gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json url --jq .url)"
+          echo "Unpublished candidate: $url" >> "$GITHUB_STEP_SUMMARY"
