@@ -1,0 +1,68 @@
+name: Publish verified Preview 1
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-preview.yml']
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: publish-preview-426790474
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: v2.0.0-candidate-40705365475
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: c1a826ae838f9b9226cdd2dd33b3dfea6893cbfb
+      - name: Verify the release identity and build result
+        run: |
+          gh api "repos/$GITHUB_REPOSITORY/releases/426790474" > "$RUNNER_TEMP/release.json"
+          gh api "repos/$GITHUB_REPOSITORY/actions/runs/40705365475" > "$RUNNER_TEMP/build.json"
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          tmp = Path(os.environ['RUNNER_TEMP'])
+          release = json.loads((tmp / 'release.json').read_text())
+          build = json.loads((tmp / 'build.json').read_text())
+          expected = 'c1a826ae838f9b9226cdd2dd33b3dfea6893cbfb'
+          assert release['id'] == 426790474
+          assert release['tag_name'] == os.environ['RELEASE_TAG']
+          assert release['target_commitish'] == expected
+          assert build['head_sha'] == expected
+          assert build['status'] == 'completed' and build['conclusion'] == 'success'
+          assert build['path'] == '.github/workflows/release.yml'
+          assert build['head_repository']['full_name'].lower() == os.environ['GITHUB_REPOSITORY'].lower()
+          assert all(asset['state'] == 'uploaded' for asset in release['assets'])
+          PY
+      - name: Download and verify all published packages
+        run: |
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --dir dist
+          python3 tools/release/verify-release.py dist
+      - name: Publish this verified preview
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          Path('publish.json').write_text("{\"draft\":false,\"prerelease\":true,\"make_latest\":\"false\",\"name\":\"GBAx 2.0.0 Preview 1\",\"body\":\"GBAx 2.0.0 Preview 1\\n\\nDownload a ready-to-run package from Assets below. No source build is required.\\n\\n| Platform | Download | Requirements |\\n| --- | --- | --- |\\n| Windows | GBAx-2.0.0-windows-x64.zip | Windows 10/11, x64 |\\n| Linux | GBAx-2.0.0-linux-x86_64.AppImage | x86_64; Ubuntu 24.04 or compatible glibc 2.39+ |\\n| Mac (Apple Silicon) | GBAx-2.0.0-macos-arm64-unsigned.dmg | macOS 15+ |\\n| Mac (Intel) | GBAx-2.0.0-macos-x86_64-unsigned.dmg | macOS 15+ |\\n\\nWindows: extract the complete ZIP, then run GBAx.exe. Keep the bundled DLLs and folders alongside it.\\nLinux: mark the AppImage executable and launch it. If FUSE is unavailable, use APPIMAGE_EXTRACT_AND_RUN=1.\\nMac: choose your processor type and drag GBAx into Applications.\\n\\nThe Mac packages are ad-hoc signed test builds, not Apple Developer ID signed or notarized. macOS may block them or display a security warning. This preview is provided for testing.\\n\\nAll four native builds and their deployed runtime checks passed. Linux also passed 25 test groups. Automated checks do not replace gameplay, audio, controller, save-state and fullscreen testing on real desktops.\\n\\nIncludes GBA/GB/GBC emulation, SDL audio/controllers, ZIP/7z support, background artwork downloads, screenshots and save states. Automatic updates, FFmpeg recording, Lua scripting and Discord presence are disabled in this release profile.\\n\\nMatching source, dependency notices, SHA256SUMS.txt, a downloads manifest and package-check reports are included. Games and BIOS files are not supplied as part of the executable packages.\\n\\nReport issues at https://github.com/gbaxemulator/GBAx/issues and include your operating system and processor type.\\n\"}", encoding='utf-8')
+          PY
+          gh api --method PATCH "repos/$GITHUB_REPOSITORY/releases/426790474" --input publish.json > "$RUNNER_TEMP/published.json"
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          release = json.loads((Path(os.environ['RUNNER_TEMP']) / 'published.json').read_text())
+          assert release['draft'] is False and release['prerelease'] is True
+          assert release['tag_name'] == os.environ['RELEASE_TAG']
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
+              summary.write('Published preview: ' + release['html_url'] + '\n')
+          print(release['html_url'])
+          PY
