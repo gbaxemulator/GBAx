@@ -1,6 +1,6 @@
 # Desktop release validation — 28 October 2026
 
-This delivery contains the release source, native build scripts and a tested Linux AppImage candidate. Windows and both Mac architectures have not been built in this environment. No GitHub workflow has been run and no public release or website download has been published.
+The local Linux results below describe the initial source delivery. Native builds are now running in GitHub Actions: see the repository’s **Build desktop downloads** workflow for results tied to each commit. The first hosted Linux job passed; Windows and Mac issues found in that run are being corrected. No public release or website download has been published.
 
 ## Completed
 

@@ -14,7 +14,7 @@ function Run([string]$program, [string[]]$arguments) {
 }
 Run 'cmake' @('-S', $root, '-B', $BuildDirectory, '-G', 'Visual Studio 17 2022', '-A', 'x64',
     '-C', "$PSScriptRoot/profile.cmake", "-DCMAKE_TOOLCHAIN_FILE=$VcpkgRoot/scripts/buildsystems/vcpkg.cmake",
-    '-DVCPKG_TARGET_TRIPLET=x64-windows', "-DCMAKE_PREFIX_PATH=$QtRoot", '-DUSE_EPOXY=OFF')
+    '-DVCPKG_TARGET_TRIPLET=x64-windows', "-DCMAKE_PREFIX_PATH=$QtRoot", '-DUSE_EPOXY=ON')
 Run 'cmake' @('--build', $BuildDirectory, '--config', 'Release', '--target', 'gbax-qt', '--parallel', '2')
 Run 'python' @("$PSScriptRoot/release.py", 'check-cache', "$BuildDirectory/CMakeCache.txt")
 $version = (& python "$PSScriptRoot/release.py" version).Trim()

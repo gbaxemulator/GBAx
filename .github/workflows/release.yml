@@ -1,6 +1,17 @@
 name: Build desktop downloads
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'include/**'
+      - 'platform/**'
+      - 'res/**'
+      - 'CMakeLists.txt'
+      - '*.cmake'
+      - 'tools/**'
+      - '.github/workflows/release.yml'
   workflow_dispatch:
     inputs:
       sign_macos:
@@ -74,7 +85,7 @@ jobs:
         run: |
           & ./.tools/vcpkg/bootstrap-vcpkg.bat -disableMetrics
           if ($LASTEXITCODE -ne 0) { throw 'vcpkg bootstrap failed' }
-          & ./.tools/vcpkg/vcpkg.exe install sdl2:x64-windows libzip:x64-windows libpng:x64-windows sqlite3:x64-windows zlib:x64-windows
+          & ./.tools/vcpkg/vcpkg.exe install sdl2:x64-windows libzip:x64-windows libpng:x64-windows sqlite3:x64-windows zlib:x64-windows libepoxy:x64-windows
           if ($LASTEXITCODE -ne 0) { throw 'vcpkg dependency installation failed' }
       - name: Build, package and test Windows ZIP
         shell: pwsh

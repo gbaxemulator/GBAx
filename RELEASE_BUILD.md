@@ -11,7 +11,7 @@ This source includes a release workflow for Windows x64, Linux x86_64, macOS App
 5. Configure Apple signing as described below, then run again with **Sign and notarize both Mac packages** enabled. Optionally create a **draft** GitHub release. The workflow never publishes a release automatically.
 6. Test the packages on their actual desktop systems before publishing the draft or copying the downloads to your website.
 
-The repository can be private. Hosted runner usage is subject to your GitHub plan. No repository, release or website was created by adding these files.
+Changes to source, resources or build scripts on `main` also run the unsigned builds automatically. Signing and draft-release creation are explicit options in **Run workflow**. Hosted runner usage is subject to your GitHub plan.
 
 For the results of the checks actually run on this source delivery, see `tools/release/validation/STATUS.md`. Build scripts for a platform are not a substitute for a passing native build and a desktop test on that platform.
 
@@ -39,7 +39,7 @@ Use a fresh release build directory. The scripts refuse to reuse an existing `pa
 With Visual Studio 2022 C++ tools, CMake, Python, Qt and vcpkg installed, install the runtime dependencies:
 
 ```powershell
-C:\Users\shawn\vcpkg\vcpkg.exe install sdl2:x64-windows libzip:x64-windows libpng:x64-windows sqlite3:x64-windows zlib:x64-windows
+C:\Users\shawn\vcpkg\vcpkg.exe install sdl2:x64-windows libzip:x64-windows libpng:x64-windows sqlite3:x64-windows zlib:x64-windows libepoxy:x64-windows
 ```
 
 Then, from the source directory in PowerShell:
