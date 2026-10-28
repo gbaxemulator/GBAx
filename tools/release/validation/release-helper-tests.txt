@@ -1,0 +1,8 @@
+test_cache_does_not_hide_disabled_feature (test_release.ReleaseTests.test_cache_does_not_hide_disabled_feature) ... ok
+test_checksum_detects_changed_binary (test_release.ReleaseTests.test_checksum_detects_changed_binary) ... ok
+test_missing_platform_or_failed_runtime_blocks_assembly (test_release.ReleaseTests.test_missing_platform_or_failed_runtime_blocks_assembly) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.298s
+
+OK

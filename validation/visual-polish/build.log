@@ -1,0 +1,98 @@
+[1/10] cd /workspace/scratch/f3fa4914dddb/gbax-review && /workspace/scratch/f3fa4914dddb/build-deps/usr/bin/cmake -DBINARY_NAME=gbax -DCONFIG_FILE=/workspace/scratch/f3fa4914dddb/gbax-review/src/core/version.c.in -DOUT_FILE=/workspace/scratch/f3fa4914dddb/gbax-build/version.c -P /workspace/scratch/f3fa4914dddb/gbax-review/version.cmake
+[2/10] Automatic MOC for target gbax-qt
+[3/9] Automatic MOC for target test-qt-player
+[4/8] Building CXX object qt/CMakeFiles/test-qt-player.dir/test/player.cpp.o
+[5/8] Building CXX object qt/CMakeFiles/gbax-qt.dir/LauncherWindow.cpp.o
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp: In member function ‘void QGBA::LauncherWindow::finalizeLibraryScan(const QStringList&, bool)’:
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:3188:153: warning: ignoring return value of ‘auto QtConcurrent::run(Function&&, Args&& ...) [with Function = QGBA::LauncherWindow::finalizeLibraryScan(const QStringList&, bool)::<lambda()>; Args = {}]’, declared with attribute ‘nodiscard’ [-Wunused-result]
+ 3188 |                 if (!dir.isEmpty()) QtConcurrent::run([dir, recursive, roms, archives]() { saveCachedLauncherRomList(dir, recursive, roms, archives); });
+      |                                                                                                                                                         ^
+In file included from /workspace/scratch/f3fa4914dddb/build-deps/usr/include/x86_64-linux-gnu/qt6/QtConcurrent/QtConcurrent:14,
+                 from /workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:117:
+/workspace/scratch/f3fa4914dddb/build-deps/usr/include/x86_64-linux-gnu/qt6/QtConcurrent/qtconcurrentrun.h:55:6: note: declared here
+   55 | auto run(Function &&f, Args &&...args)
+      |      ^~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp: In member function ‘QPixmap QGBA::LauncherWindow::makeCover(const QString&, const QSize&, const QString&) const’:
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:3220:50: warning: unused parameter ‘title’ [-Wunused-parameter]
+ 3220 | QPixmap LauncherWindow::makeCover(const QString& title, const QSize& size, const QString& status) const {
+      |                                   ~~~~~~~~~~~~~~~^~~~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp: In member function ‘void QGBA::LauncherWindow::clearLauncherCaches(bool)’:
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:4288:103: warning: ignoring return value of ‘auto QtConcurrent::run(QThreadPool*, Function&&, Args&& ...) [with Function = QGBA::LauncherWindow::clearLauncherCaches(bool)::<lambda()>; Args = {}]’, declared with attribute ‘nodiscard’ [-Wunused-result]
+ 4288 |         QtConcurrent::run(&m_artworkWorkers, [thumbnails]() { QDir(thumbnails).removeRecursively(); });
+      |                                                                                                       ^
+/workspace/scratch/f3fa4914dddb/build-deps/usr/include/x86_64-linux-gnu/qt6/QtConcurrent/qtconcurrentrun.h:36:6: note: declared here
+   36 | auto run(QThreadPool *pool, Function &&f, Args &&...args)
+      |      ^~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp: At global scope:
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:721:16: warning: ‘QString launcherBadgeRowHtml(const QStringList&)’ defined but not used [-Wunused-function]
+  721 | static QString launcherBadgeRowHtml(const QStringList& badges) {
+      |                ^~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:585:16: warning: ‘QString launcherUiServerName()’ defined but not used [-Wunused-function]
+  585 | static QString launcherUiServerName() {
+      |                ^~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:563:13: warning: ‘bool removePathRecursivelySafe(const QString&)’ defined but not used [-Wunused-function]
+  563 | static bool removePathRecursivelySafe(const QString& path) {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:543:13: warning: ‘void trimArtworkCache(const QString&, int, qint64)’ defined but not used [-Wunused-function]
+  543 | static void trimArtworkCache(const QString& dirPath, int maxFiles = 1000, qint64 maxBytes = 300LL * 1024 * 1024) {
+      |             ^~~~~~~~~~~~~~~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:427:13: warning: ‘bool isRomFile(const QString&)’ defined but not used [-Wunused-function]
+  427 | static bool isRomFile(const QString& path) {
+      |             ^~~~~~~~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:362:16: warning: ‘QString weakLibretroLookupTitle(QString)’ defined but not used [-Wunused-function]
+  362 | static QString weakLibretroLookupTitle(QString title) {
+      |                ^~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:336:13: warning: ‘bool hasCachedLauncherRomList(const QString&, bool)’ defined but not used [-Wunused-function]
+  336 | static bool hasCachedLauncherRomList(const QString& rootDir, bool recursive) {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:317:20: warning: ‘QStringList loadCachedLauncherRomList(const QString&, bool)’ defined but not used [-Wunused-function]
+  317 | static QStringList loadCachedLauncherRomList(const QString& rootDir, bool recursive) {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[6/8] Linking CXX executable qt/gbax-qt
+[7/8] Building CXX object qt/CMakeFiles/test-qt-player.dir/LauncherWindow.cpp.o
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp: In member function ‘void QGBA::LauncherWindow::finalizeLibraryScan(const QStringList&, bool)’:
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:3188:153: warning: ignoring return value of ‘auto QtConcurrent::run(Function&&, Args&& ...) [with Function = QGBA::LauncherWindow::finalizeLibraryScan(const QStringList&, bool)::<lambda()>; Args = {}]’, declared with attribute ‘nodiscard’ [-Wunused-result]
+ 3188 |                 if (!dir.isEmpty()) QtConcurrent::run([dir, recursive, roms, archives]() { saveCachedLauncherRomList(dir, recursive, roms, archives); });
+      |                                                                                                                                                         ^
+In file included from /workspace/scratch/f3fa4914dddb/build-deps/usr/include/x86_64-linux-gnu/qt6/QtConcurrent/QtConcurrent:14,
+                 from /workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:117:
+/workspace/scratch/f3fa4914dddb/build-deps/usr/include/x86_64-linux-gnu/qt6/QtConcurrent/qtconcurrentrun.h:55:6: note: declared here
+   55 | auto run(Function &&f, Args &&...args)
+      |      ^~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp: In member function ‘QPixmap QGBA::LauncherWindow::makeCover(const QString&, const QSize&, const QString&) const’:
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:3220:50: warning: unused parameter ‘title’ [-Wunused-parameter]
+ 3220 | QPixmap LauncherWindow::makeCover(const QString& title, const QSize& size, const QString& status) const {
+      |                                   ~~~~~~~~~~~~~~~^~~~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp: In member function ‘void QGBA::LauncherWindow::clearLauncherCaches(bool)’:
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:4288:103: warning: ignoring return value of ‘auto QtConcurrent::run(QThreadPool*, Function&&, Args&& ...) [with Function = QGBA::LauncherWindow::clearLauncherCaches(bool)::<lambda()>; Args = {}]’, declared with attribute ‘nodiscard’ [-Wunused-result]
+ 4288 |         QtConcurrent::run(&m_artworkWorkers, [thumbnails]() { QDir(thumbnails).removeRecursively(); });
+      |                                                                                                       ^
+/workspace/scratch/f3fa4914dddb/build-deps/usr/include/x86_64-linux-gnu/qt6/QtConcurrent/qtconcurrentrun.h:36:6: note: declared here
+   36 | auto run(QThreadPool *pool, Function &&f, Args &&...args)
+      |      ^~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp: At global scope:
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:721:16: warning: ‘QString launcherBadgeRowHtml(const QStringList&)’ defined but not used [-Wunused-function]
+  721 | static QString launcherBadgeRowHtml(const QStringList& badges) {
+      |                ^~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:585:16: warning: ‘QString launcherUiServerName()’ defined but not used [-Wunused-function]
+  585 | static QString launcherUiServerName() {
+      |                ^~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:563:13: warning: ‘bool removePathRecursivelySafe(const QString&)’ defined but not used [-Wunused-function]
+  563 | static bool removePathRecursivelySafe(const QString& path) {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:543:13: warning: ‘void trimArtworkCache(const QString&, int, qint64)’ defined but not used [-Wunused-function]
+  543 | static void trimArtworkCache(const QString& dirPath, int maxFiles = 1000, qint64 maxBytes = 300LL * 1024 * 1024) {
+      |             ^~~~~~~~~~~~~~~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:427:13: warning: ‘bool isRomFile(const QString&)’ defined but not used [-Wunused-function]
+  427 | static bool isRomFile(const QString& path) {
+      |             ^~~~~~~~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:362:16: warning: ‘QString weakLibretroLookupTitle(QString)’ defined but not used [-Wunused-function]
+  362 | static QString weakLibretroLookupTitle(QString title) {
+      |                ^~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:336:13: warning: ‘bool hasCachedLauncherRomList(const QString&, bool)’ defined but not used [-Wunused-function]
+  336 | static bool hasCachedLauncherRomList(const QString& rootDir, bool recursive) {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f3fa4914dddb/gbax-review/src/platform/qt/LauncherWindow.cpp:317:20: warning: ‘QStringList loadCachedLauncherRomList(const QString&, bool)’ defined but not used [-Wunused-function]
+  317 | static QStringList loadCachedLauncherRomList(const QString& rootDir, bool recursive) {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[8/8] Linking CXX executable qt/test-qt-player

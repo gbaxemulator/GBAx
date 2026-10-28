@@ -1,0 +1,60 @@
+# Generic files
+*.user*
+*~
+*.swp
+*.pyc
+
+# Build directories
+/build
+/build-*
+/.vs
+
+# Build files
+*.a
+*.dylib
+*.dll
+*.lib
+*.exe
+*.o
+*.so
+CMakeCache.txt
+CMakeFiles
+CMakeSettings.json
+CMakeUserPresets.json
+compile_commands.json
+/.cache
+/.vscode
+cmake_install.cmake
+hle-bios.bin
+version.c
+
+# Runtime generated cruft
+*.sav
+*.ss0
+
+# Release outputs and local tools
+/dist/
+/.tools/
+/release-deps/
+
+# Personal library data must not enter release source archives
+*.gba
+*.gb
+*.gbc
+*.sav
+*.srm
+*.ss[0-9]
+/qt.ini
+/config.ini
+/portable.ini
+/artwork/
+/Roms*/
+/ROMs*/
+__pycache__/
+
+# Preserve the upstream emulator regression fixtures in a fresh repository.
+!/cinema/**/*.gb
+!/cinema/**/*.gbc
+!/cinema/**/*.gba
+!/cinema/**/*.sav
+!/cinema/**/*.ss[0-9]

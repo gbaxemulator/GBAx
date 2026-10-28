@@ -1,0 +1,14 @@
+/* Copyright (c) 2013-2016 Jeffrey Pfau
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+#include <gbax/core/version.h>
+
+GBAX_EXPORT const char* const gitCommit = "${GIT_COMMIT}";
+GBAX_EXPORT const char* const gitCommitShort = "${GIT_COMMIT_SHORT}";
+GBAX_EXPORT const char* const gitBranch = "${GIT_BRANCH}";
+GBAX_EXPORT const int gitRevision = ${GIT_REV};
+GBAX_EXPORT const char* const binaryName = "${BINARY_NAME}";
+GBAX_EXPORT const char* const projectName = "${PROJECT_NAME}";
+GBAX_EXPORT const char* const projectVersion = "2.0.0";

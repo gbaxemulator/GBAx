@@ -1,0 +1,10 @@
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+********* Start testing of PlayerTest *********
+Config: Using QtTest library 6.4.2, Qt 6.4.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 13.2.0), ubuntu 24.04
+PASS   : PlayerTest::initTestCase()
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-xfZfhl/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::continueCardFitsWrappedTitle()
+PASS   : PlayerTest::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 445ms
+********* Finished testing of PlayerTest *********

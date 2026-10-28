@@ -1,0 +1,151 @@
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+********* Start testing of PlayerTest *********
+Config: Using QtTest library 6.4.2, Qt 6.4.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 13.2.0), ubuntu 24.04
+PASS   : PlayerTest::initTestCase()
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-uJfMfZ/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::fullscreenRequestedBeforeShow()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-uJfMfZ/gbax/gamecontrollerdb.txt: Invalid RWops
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-uJfMfZ/gbax/gamecontrollerdb.txt: Invalid RWops
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-uJfMfZ/gbax/gamecontrollerdb.txt: Invalid RWops
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+PASS   : PlayerTest::playerLifecycleAndChrome()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-uJfMfZ/gbax/gamecontrollerdb.txt: Invalid RWops
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-uJfMfZ/gbax/gamecontrollerdb.txt: Invalid RWops
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-uJfMfZ/gbax/gamecontrollerdb.txt: Invalid RWops
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-uJfMfZ/gbax/gamecontrollerdb.txt: Invalid RWops
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-uJfMfZ/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::closeLauncherDuringScan()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-uJfMfZ/gbax/gamecontrollerdb.txt: Invalid RWops
+QINFO  : PlayerTest::launcherWorkflowBenchmark() GRID: QSize(748, 540) QSize(185, 226) QSize(171, 188) QRect(4,0 177x207) QRect(559,0 177x207)
+QINFO  : PlayerTest::launcherWorkflowBenchmark() WORKFLOW: constructor=65 ms ready=159 ms populated=668 ms browse=329 ms maxHeartbeatGap=113 ms
+PASS   : PlayerTest::launcherWorkflowBenchmark()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-uJfMfZ/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::artworkDoesNotBlockStartupAndCanCancel()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-uJfMfZ/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::artworkIsSharedAndAppearsWithoutRestart()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-uJfMfZ/gbax/gamecontrollerdb.txt: Invalid RWops
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-uJfMfZ/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::artworkConcurrencyAndOfflineCooldown()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-uJfMfZ/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::automaticArtworkCoversWholeFolderWithoutScrolling()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-uJfMfZ/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::continueCardFitsWrappedTitle()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-uJfMfZ/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::rescanDetectsChangesAndKeepsDistinctTitles()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-uJfMfZ/gbax/gamecontrollerdb.txt: Invalid RWops
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "DejaVu Sans", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Nimbus Sans", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "URW Gothic", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Nimbus Sans Narrow", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "DejaVu Sans Mono", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "DejaVu Serif", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Mono", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Mono Caps", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Mono Light", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Mono Light Cond", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Mono Prop", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Mono Prop Light", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Mono Slanted", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Roman", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Roman Caps", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Roman Dunhill", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Roman Slanted", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Roman Unslanted", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Sans", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Sans Quotation", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "D050000L", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Standard Symbols PS", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Math", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "C059", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Nimbus Mono PS", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Nimbus Roman", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "P052", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Bitstream Charter", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Courier", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Utopia", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "URW Bookman", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Roman Demi", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Sans Demi Cond", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Z003", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame() This plugin does not support raise()
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame() This plugin does not support raise()
+PASS   : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()
+PASS   : PlayerTest::cleanupTestCase()
+Totals: 13 passed, 0 failed, 0 skipped, 0 blacklisted, 10776ms
+********* Finished testing of PlayerTest *********

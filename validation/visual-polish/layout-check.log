@@ -1,0 +1,53 @@
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+********* Start testing of PlayerTest *********
+Config: Using QtTest library 6.4.2, Qt 6.4.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 13.2.0), ubuntu 24.04
+PASS   : PlayerTest::initTestCase()
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-GTiVhG/gbax/gamecontrollerdb.txt: Invalid RWops
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-GTiVhG/gbax/gamecontrollerdb.txt: Invalid RWops
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-GTiVhG/gbax/gamecontrollerdb.txt: Invalid RWops
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+PASS   : PlayerTest::playerLifecycleAndChrome()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-GTiVhG/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::emptySaveSlotsCollapseAndArtworkStaysVivid()
+PASS   : PlayerTest::cleanupTestCase()
+Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 1390ms
+********* Finished testing of PlayerTest *********

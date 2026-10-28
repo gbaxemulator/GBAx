@@ -1,0 +1,1547 @@
+Start testing: Oct 28 17:37 CST
+----------------------------------------------------------
+1/28 Testing: platform-qt-autoscript
+1/28 Test: platform-qt-autoscript
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/qt/test-qt-autoscript"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/qt
+"platform-qt-autoscript" start time: Oct 28 17:37 CST
+Output:
+----------------------------------------------------------
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+********* Start testing of AutorunScriptModelTest *********
+Config: Using QtTest library 6.4.2, Qt 6.4.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 13.2.0), ubuntu 24.04
+PASS   : AutorunScriptModelTest::initTestCase()
+PASS   : AutorunScriptModelTest::testAdd()
+PASS   : AutorunScriptModelTest::testEdit()
+PASS   : AutorunScriptModelTest::testMoveUp()
+PASS   : AutorunScriptModelTest::testMoveDown()
+PASS   : AutorunScriptModelTest::testRemove()
+PASS   : AutorunScriptModelTest::testSerialize()
+PASS   : AutorunScriptModelTest::testDeserialize()
+QCRITICAL: AutorunScriptModelTest::testDeserializeInvalid() Qt: Could not load autorun script settings: unknown script info format 0
+PASS   : AutorunScriptModelTest::testDeserializeInvalid()
+PASS   : AutorunScriptModelTest::testDeserializeV1()
+PASS   : AutorunScriptModelTest::cleanupTestCase()
+Totals: 11 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of AutorunScriptModelTest *********
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"platform-qt-autoscript" end time: Oct 28 17:37 CST
+"platform-qt-autoscript" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/28 Testing: platform-qt-launcherdata
+2/28 Test: platform-qt-launcherdata
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/qt/test-qt-launcherdata"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/qt
+"platform-qt-launcherdata" start time: Oct 28 17:37 CST
+Output:
+----------------------------------------------------------
+********* Start testing of LauncherDataTest *********
+Config: Using QtTest library 6.4.2, Qt 6.4.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 13.2.0), ubuntu 24.04
+PASS   : LauncherDataTest::initTestCase()
+PASS   : LauncherDataTest::resetPreservesPortableFiles()
+PASS   : LauncherDataTest::resetDoesNotRecurseIntoUnexpectedDirectory()
+PASS   : LauncherDataTest::emptyPathRejected()
+PASS   : LauncherDataTest::cleanupTestCase()
+Totals: 5 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of LauncherDataTest *********
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"platform-qt-launcherdata" end time: Oct 28 17:37 CST
+"platform-qt-launcherdata" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/28 Testing: platform-qt-library
+3/28 Test: platform-qt-library
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/qt/test-qt-library"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/qt
+"platform-qt-library" start time: Oct 28 17:37 CST
+Output:
+----------------------------------------------------------
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+********* Start testing of LibraryModelTest *********
+Config: Using QtTest library 6.4.2, Qt 6.4.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 13.2.0), ubuntu 24.04
+PASS   : LibraryModelTest::initTestCase()
+PASS   : LibraryModelTest::testList()
+PASS   : LibraryModelTest::testTree()
+PASS   : LibraryModelTest::modeSwitchTest1()
+PASS   : LibraryModelTest::modeSwitchTest2()
+PASS   : LibraryModelTest::cleanupTestCase()
+Totals: 6 passed, 0 failed, 0 skipped, 0 blacklisted, 4ms
+********* Finished testing of LibraryModelTest *********
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"platform-qt-library" end time: Oct 28 17:37 CST
+"platform-qt-library" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/28 Testing: platform-qt-player
+4/28 Test: platform-qt-player
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/qt/test-qt-player"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/qt
+"platform-qt-player" start time: Oct 28 17:37 CST
+Output:
+----------------------------------------------------------
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+********* Start testing of PlayerTest *********
+Config: Using QtTest library 6.4.2, Qt 6.4.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 13.2.0), ubuntu 24.04
+PASS   : PlayerTest::initTestCase()
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::fullscreenRequestedBeforeShow()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support setting window masks
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+QWARN  : PlayerTest::playerLifecycleAndChrome() This plugin does not support raise()
+PASS   : PlayerTest::playerLifecycleAndChrome()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::closeLauncherDuringScan()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+QINFO  : PlayerTest::launcherWorkflowBenchmark() GRID: QSize(748, 540) QSize(185, 226) QSize(171, 188) QRect(4,0 177x207) QRect(559,0 177x207)
+QINFO  : PlayerTest::launcherWorkflowBenchmark() WORKFLOW: constructor=49 ms ready=117 ms populated=658 ms browse=335 ms maxHeartbeatGap=107 ms
+PASS   : PlayerTest::launcherWorkflowBenchmark()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::artworkDoesNotBlockStartupAndCanCancel()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::artworkIsSharedAndAppearsWithoutRestart()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::artworkConcurrencyAndOfflineCooldown()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::automaticArtworkCoversWholeFolderWithoutScrolling()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::continueCardFitsWrappedTitle()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::rescanDetectsChangesAndKeepsDistinctTitles()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "DejaVu Sans", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Nimbus Sans", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "URW Gothic", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Nimbus Sans Narrow", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "DejaVu Sans Mono", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "DejaVu Serif", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Mono", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Mono Caps", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Mono Light", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Mono Light Cond", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Mono Prop", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Mono Prop Light", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Mono Slanted", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Roman", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Roman Caps", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Roman Dunhill", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Roman Slanted", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Roman Unslanted", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Sans", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Sans Quotation", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "D050000L", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Standard Symbols PS", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Math", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "C059", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Nimbus Mono PS", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Nimbus Roman", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "P052", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Bitstream Charter", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Courier", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Utopia", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "URW Bookman", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Roman Demi", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Latin Modern Sans Demi Cond", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "Z003", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()   OpenType support missing for "", script 16
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame() This plugin does not support propagateSizeHints()
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame() This plugin does not support raise()
+QWARN  : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame() This plugin does not support raise()
+PASS   : PlayerTest::welcomeWithoutFolderAndSettingsWithoutGame()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::artworkStatesDistinguishQueueDownloadAndFailure()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+PASS   : PlayerTest::emptySaveSlotsCollapseAndArtworkStaysVivid()
+SDL Events: SDL failed to load optional game controller mappings from /tmp/qt_temp-eQGrOQ/gbax/gamecontrollerdb.txt: Invalid RWops
+QINFO  : PlayerTest::cataloguePreloadsWithoutScrolling() CATALOGUE: all 947 thumbnail icons ready without scrolling in 18801 ms; maxHeartbeatGap=130 ms
+PASS   : PlayerTest::cataloguePreloadsWithoutScrolling()
+PASS   : PlayerTest::cleanupTestCase()
+Totals: 16 passed, 0 failed, 0 skipped, 0 blacklisted, 31820ms
+********* Finished testing of PlayerTest *********
+<end of output>
+Test time =  31.90 sec
+----------------------------------------------------------
+Test Passed.
+"platform-qt-player" end time: Oct 28 17:38 CST
+"platform-qt-player" time elapsed: 00:00:31
+----------------------------------------------------------
+
+5/28 Testing: platform-qt-spanset
+5/28 Test: platform-qt-spanset
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/qt/test-qt-spanset"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/qt
+"platform-qt-spanset" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+********* Start testing of SpanSetTest *********
+Config: Using QtTest library 6.4.2, Qt 6.4.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 13.2.0), ubuntu 24.04
+PASS   : SpanSetTest::initTestCase()
+PASS   : SpanSetTest::oneSpan()
+PASS   : SpanSetTest::twoSpans()
+PASS   : SpanSetTest::mergeSpans()
+PASS   : SpanSetTest::cleanupTestCase()
+Totals: 5 passed, 0 failed, 0 skipped, 0 blacklisted, 1ms
+********* Finished testing of SpanSetTest *********
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"platform-qt-spanset" end time: Oct 28 17:38 CST
+"platform-qt-spanset" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/28 Testing: core-core
+6/28 Test: core-core
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-core-core"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"core-core" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] mCore: Running 3 test(s).
+[ RUN      ] findNullPath
+[       OK ] findNullPath
+[ RUN      ] findNullVF
+[       OK ] findNullVF
+[ RUN      ] findEmpty
+[       OK ] findEmpty
+[==========] mCore: 3 test(s) run.
+[  PASSED  ] 3 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"core-core" end time: Oct 28 17:38 CST
+"core-core" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/28 Testing: gb-core
+7/28 Test: gb-core
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-gb-core"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"gb-core" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] GBCore: Running 5 test(s).
+[ RUN      ] create
+[       OK ] create
+[ RUN      ] platform
+[       OK ] platform
+[ RUN      ] reset
+[       OK ] reset
+[ RUN      ] loadNullROM
+[       OK ] loadNullROM
+[ RUN      ] isROM
+[       OK ] isROM
+[==========] GBCore: 5 test(s) run.
+[  PASSED  ] 5 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"gb-core" end time: Oct 28 17:38 CST
+"gb-core" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/28 Testing: gb-gbx
+8/28 Test: gb-gbx
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-gb-gbx"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"gb-gbx" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] GBGBX: Running 31 test(s).
+[ RUN      ] failTooSmall
+GB MBC: Attempting to switch to an invalid ROM bank: 0
+[       OK ] failTooSmall
+[ RUN      ] failNoMagic
+GB MBC: Attempting to switch to an invalid ROM bank: 0
+[       OK ] failNoMagic
+[ RUN      ] invalidVersionLow
+[       OK ] invalidVersionLow
+[ RUN      ] invalidVersionHigh
+[       OK ] invalidVersionHigh
+[ RUN      ] mbcInvalidNone
+[       OK ] mbcInvalidNone
+[ RUN      ] mbcInvalidFallback
+[       OK ] mbcInvalidFallback
+[ RUN      ] mbcRom
+[       OK ] mbcRom
+[ RUN      ] mbc1
+[       OK ] mbc1
+[ RUN      ] mbc2
+[       OK ] mbc2
+[ RUN      ] mbc3
+[       OK ] mbc3
+[ RUN      ] mbc3Rtc
+[       OK ] mbc3Rtc
+[ RUN      ] mbc5
+[       OK ] mbc5
+[ RUN      ] mbc5Rumble
+[       OK ] mbc5Rumble
+[ RUN      ] mbc6
+[       OK ] mbc6
+[ RUN      ] mbc7
+[       OK ] mbc7
+[ RUN      ] mbc1m
+[       OK ] mbc1m
+[ RUN      ] mmm01
+[       OK ] mmm01
+[ RUN      ] pocketCam
+[       OK ] pocketCam
+[ RUN      ] huc1
+[       OK ] huc1
+[ RUN      ] huc3
+[       OK ] huc3
+[ RUN      ] tama5
+[       OK ] tama5
+[ RUN      ] bbd
+[       OK ] bbd
+[ RUN      ] hitek
+[       OK ] hitek
+[ RUN      ] ntNew
+[       OK ] ntNew
+[ RUN      ] pkjd
+[       OK ] pkjd
+[ RUN      ] wisdomTree
+[       OK ] wisdomTree
+[ RUN      ] sachenMmc1
+[       OK ] sachenMmc1
+[ RUN      ] sachenMmc2
+[       OK ] sachenMmc2
+[ RUN      ] resetMbc1m
+[       OK ] resetMbc1m
+[ RUN      ] fakeRomSize
+[       OK ] fakeRomSize
+[ RUN      ] fakeRamSize
+[       OK ] fakeRamSize
+[==========] GBGBX: 31 test(s) run.
+[  PASSED  ] 31 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"gb-gbx" end time: Oct 28 17:38 CST
+"gb-gbx" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/28 Testing: gb-mbc
+9/28 Test: gb-mbc
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-gb-mbc"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"gb-mbc" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] GBMBC: Running 7 test(s).
+GB MBC: Attempting to switch to an invalid ROM bank: 0
+[ RUN      ] detectNone
+GB MBC: Unknown MBC type: 0A
+[       OK ] detectNone
+[ RUN      ] detect1
+GB MBC: Unknown MBC type: 04
+[       OK ] detect1
+[ RUN      ] detect2
+GB MBC: Unknown MBC type: 04
+GB MBC: Unknown MBC type: 07
+[       OK ] detect2
+[ RUN      ] detect3
+GB MBC: Unknown MBC type: 0E
+GB MBC: Unknown MBC type: 14
+[       OK ] detect3
+[ RUN      ] detect5
+[       OK ] detect5
+[ RUN      ] detect6
+GB MBC: Unknown MBC type: 1F
+GB MBC: Attempting to switch to an invalid ROM bank: 2
+GB MBC: Attempting to switch to an invalid ROM bank: 3
+GB MBC: Unknown MBC type: 21
+[       OK ] detect6
+[ RUN      ] detect7
+GB MBC: Unknown MBC type: 21
+GB MBC: Unknown MBC type: 23
+[       OK ] detect7
+[==========] GBMBC: 7 test(s) run.
+[  PASSED  ] 7 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"gb-mbc" end time: Oct 28 17:38 CST
+"gb-mbc" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/28 Testing: gb-memory
+10/28 Test: gb-memory
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-gb-memory"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"gb-memory" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] GBMemory: Running 3 test(s).
+[ RUN      ] patchROMBank0
+[       OK ] patchROMBank0
+[ RUN      ] patchROMBank1
+[       OK ] patchROMBank1
+[ RUN      ] patchROMBank2
+[       OK ] patchROMBank2
+[==========] GBMemory: 3 test(s) run.
+[  PASSED  ] 3 test(s).
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"gb-memory" end time: Oct 28 17:38 CST
+"gb-memory" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/28 Testing: gb-rtc
+11/28 Test: gb-rtc
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-gb-rtc"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"gb-rtc" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] GBRTC: Running 15 test(s).
+GB MBC: Attempting to switch to an invalid ROM bank: 0
+[ RUN      ] create
+[       OK ] create
+[ RUN      ] tickSecond
+[       OK ] tickSecond
+[ RUN      ] tick30Seconds
+[       OK ] tick30Seconds
+[ RUN      ] tickMinute
+[       OK ] tickMinute
+[ RUN      ] tick90Seconds
+[       OK ] tick90Seconds
+[ RUN      ] tick30Minutes
+[       OK ] tick30Minutes
+[ RUN      ] tickHour
+[       OK ] tickHour
+[ RUN      ] tick12Hours
+[       OK ] tick12Hours
+[ RUN      ] tickDay
+[       OK ] tickDay
+[ RUN      ] wideTickDay
+[       OK ] wideTickDay
+[ RUN      ] rolloverSecond
+[       OK ] rolloverSecond
+[ RUN      ] roundtrip0
+GB MBC: Attempting to switch to an invalid RAM bank: 0
+[       OK ] roundtrip0
+[ RUN      ] roundtripSecond
+GB MBC: Attempting to switch to an invalid RAM bank: 0
+[       OK ] roundtripSecond
+[ RUN      ] roundtripDay
+GB MBC: Attempting to switch to an invalid RAM bank: 0
+[       OK ] roundtripDay
+[ RUN      ] roundtripHuge
+GB MBC: Attempting to switch to an invalid RAM bank: 0
+[       OK ] roundtripHuge
+[==========] GBRTC: 15 test(s) run.
+[  PASSED  ] 15 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"gb-rtc" end time: Oct 28 17:38 CST
+"gb-rtc" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/28 Testing: gba-cheats
+12/28 Test: gba-cheats
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-gba-cheats"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"gba-cheats" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] GBACheats: Running 25 test(s).
+[ RUN      ] createSet
+[       OK ] createSet
+[ RUN      ] addRawPARv3
+[       OK ] addRawPARv3
+[ RUN      ] doPARv3Assign
+[       OK ] doPARv3Assign
+[ RUN      ] doPARv3Slide1
+[       OK ] doPARv3Slide1
+[ RUN      ] doPARv3Slide2
+[       OK ] doPARv3Slide2
+[ RUN      ] doPARv3Slide4
+[       OK ] doPARv3Slide4
+[ RUN      ] doPARv3If1
+[       OK ] doPARv3If1
+[ RUN      ] doPARv3If1x1
+[       OK ] doPARv3If1x1
+[ RUN      ] doPARv3If2
+[       OK ] doPARv3If2
+[ RUN      ] doPARv3If2x2
+[       OK ] doPARv3If2x2
+[ RUN      ] doPARv3If2Contain1
+[       OK ] doPARv3If2Contain1
+[ RUN      ] doPARv3IfX
+[       OK ] doPARv3IfX
+[ RUN      ] doPARv3IfXxX
+[       OK ] doPARv3IfXxX
+[ RUN      ] doPARv3IfXElse
+[       OK ] doPARv3IfXElse
+[ RUN      ] doPARv3IfXElsexX
+[       OK ] doPARv3IfXElsexX
+[ RUN      ] doPARv3IfXElsexXElse
+[       OK ] doPARv3IfXElsexXElse
+[ RUN      ] doPARv3IfXContain1
+[       OK ] doPARv3IfXContain1
+[ RUN      ] doPARv3IfXContain1Else
+[       OK ] doPARv3IfXContain1Else
+[ RUN      ] doPARv3IfXElseContain1
+[       OK ] doPARv3IfXElseContain1
+[ RUN      ] doPARv3IfXContain1ElseContain1
+[       OK ] doPARv3IfXContain1ElseContain1
+[ RUN      ] doPARv3IfButton
+[       OK ] doPARv3IfButton
+[ RUN      ] doPARv3Never1
+[       OK ] doPARv3Never1
+[ RUN      ] doPARv3Never2
+[       OK ] doPARv3Never2
+[ RUN      ] doPARv3NeverX
+[       OK ] doPARv3NeverX
+[ RUN      ] doPARv3NeverXElse
+[       OK ] doPARv3NeverXElse
+[==========] GBACheats: 25 test(s) run.
+[  PASSED  ] 25 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"gba-cheats" end time: Oct 28 17:38 CST
+"gba-cheats" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/28 Testing: gba-core
+13/28 Test: gba-core
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-gba-core"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"gba-core" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] GBACore: Running 4 test(s).
+[ RUN      ] create
+[       OK ] create
+[ RUN      ] platform
+[       OK ] platform
+[ RUN      ] reset
+[       OK ] reset
+[ RUN      ] loadNullROM
+[       OK ] loadNullROM
+[==========] GBACore: 4 test(s) run.
+[  PASSED  ] 4 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"gba-core" end time: Oct 28 17:38 CST
+"gba-core" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/28 Testing: debugger-lexer
+14/28 Test: debugger-lexer
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-debugger-lexer"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"debugger-lexer" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] Lexer: Running 64 test(s).
+[ RUN      ] lexEmpty
+[       OK ] lexEmpty
+[ RUN      ] lexInt
+[       OK ] lexInt
+[ RUN      ] lexDecimal
+[       OK ] lexDecimal
+[ RUN      ] lexBinary
+[       OK ] lexBinary
+[ RUN      ] lexHex
+[       OK ] lexHex
+[ RUN      ] lexSigilHex
+[       OK ] lexSigilHex
+[ RUN      ] lexSigilSegmentHex
+[       OK ] lexSigilSegmentHex
+[ RUN      ] lexInvalidDecimal
+[       OK ] lexInvalidDecimal
+[ RUN      ] lexInvalidHex
+[       OK ] lexInvalidHex
+[ RUN      ] lexInvalidBinary
+[       OK ] lexInvalidBinary
+[ RUN      ] lexTruncatedHex
+[       OK ] lexTruncatedHex
+[ RUN      ] lexTruncatedSigilHex
+[       OK ] lexTruncatedSigilHex
+[ RUN      ] lexTruncatedBinary
+[       OK ] lexTruncatedBinary
+[ RUN      ] lexIdentifier
+[       OK ] lexIdentifier
+[ RUN      ] lexAddOperator
+[       OK ] lexAddOperator
+[ RUN      ] lexIdentifierAddOperator
+[       OK ] lexIdentifierAddOperator
+[ RUN      ] lexSubOperator
+[       OK ] lexSubOperator
+[ RUN      ] lexIdentifierSubOperator
+[       OK ] lexIdentifierSubOperator
+[ RUN      ] lexMulOperator
+[       OK ] lexMulOperator
+[ RUN      ] lexIdentifierMulOperator
+[       OK ] lexIdentifierMulOperator
+[ RUN      ] lexDivOperator
+[       OK ] lexDivOperator
+[ RUN      ] lexIdentifierDivOperator
+[       OK ] lexIdentifierDivOperator
+[ RUN      ] lexModOperator
+[       OK ] lexModOperator
+[ RUN      ] lexIdentifierModOperator
+[       OK ] lexIdentifierModOperator
+[ RUN      ] lexAndOperator
+[       OK ] lexAndOperator
+[ RUN      ] lexIdentifierAndOperator
+[       OK ] lexIdentifierAndOperator
+[ RUN      ] lexOrOperator
+[       OK ] lexOrOperator
+[ RUN      ] lexIdentifierOrOperator
+[       OK ] lexIdentifierOrOperator
+[ RUN      ] lexXorOperator
+[       OK ] lexXorOperator
+[ RUN      ] lexIdentifierXorOperator
+[       OK ] lexIdentifierXorOperator
+[ RUN      ] lexLessOperator
+[       OK ] lexLessOperator
+[ RUN      ] lexIdentifierLessOperator
+[       OK ] lexIdentifierLessOperator
+[ RUN      ] lexGreaterOperator
+[       OK ] lexGreaterOperator
+[ RUN      ] lexIdentifierGreaterOperator
+[       OK ] lexIdentifierGreaterOperator
+[ RUN      ] lexNotOperator
+[       OK ] lexNotOperator
+[ RUN      ] lexNotNotOperator
+[       OK ] lexNotNotOperator
+[ RUN      ] lexFlipOperator
+[       OK ] lexFlipOperator
+[ RUN      ] lexEqualsOperator
+[       OK ] lexEqualsOperator
+[ RUN      ] lexIdentifierEqualsOperator
+[       OK ] lexIdentifierEqualsOperator
+[ RUN      ] lexNotEqualsOperator
+[       OK ] lexNotEqualsOperator
+[ RUN      ] lexIdentifierNotEqualsOperator
+[       OK ] lexIdentifierNotEqualsOperator
+[ RUN      ] lexLEOperator
+[       OK ] lexLEOperator
+[ RUN      ] lexIdentifierLEOperator
+[       OK ] lexIdentifierLEOperator
+[ RUN      ] lexGEOperator
+[       OK ] lexGEOperator
+[ RUN      ] lexIdentifierGEOperator
+[       OK ] lexIdentifierGEOperator
+[ RUN      ] lexLAndOperator
+[       OK ] lexLAndOperator
+[ RUN      ] lexIdentifierLAndOperator
+[       OK ] lexIdentifierLAndOperator
+[ RUN      ] lexLOrOperator
+[       OK ] lexLOrOperator
+[ RUN      ] lexIdentifierLOrOperator
+[       OK ] lexIdentifierLOrOperator
+[ RUN      ] lexShiftLOperator
+[       OK ] lexShiftLOperator
+[ RUN      ] lexIdentifierShiftLOperator
+[       OK ] lexIdentifierShiftLOperator
+[ RUN      ] lexShiftROperator
+[       OK ] lexShiftROperator
+[ RUN      ] lexIdentifierShiftROperator
+[       OK ] lexIdentifierShiftROperator
+[ RUN      ] lexSimpleExpression
+[       OK ] lexSimpleExpression
+[ RUN      ] lexOpenParen
+[       OK ] lexOpenParen
+[ RUN      ] lexCloseParen
+[       OK ] lexCloseParen
+[ RUN      ] lexIdentifierCloseParen
+[       OK ] lexIdentifierCloseParen
+[ RUN      ] lexParentheticalExpression
+[       OK ] lexParentheticalExpression
+[ RUN      ] lexNestedParentheticalExpression
+[       OK ] lexNestedParentheticalExpression
+[ RUN      ] lexSpaceSimple
+[       OK ] lexSpaceSimple
+[ RUN      ] lexSpaceIdentifier
+[       OK ] lexSpaceIdentifier
+[ RUN      ] lexSpaceOperator
+[       OK ] lexSpaceOperator
+[ RUN      ] lexSpaceParen
+[       OK ] lexSpaceParen
+[ RUN      ] lexSpaceParens
+[       OK ] lexSpaceParens
+[==========] Lexer: 64 test(s) run.
+[  PASSED  ] 64 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"debugger-lexer" end time: Oct 28 17:38 CST
+"debugger-lexer" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/28 Testing: debugger-parser
+15/28 Test: debugger-parser
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-debugger-parser"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"debugger-parser" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] Parser: Running 10 test(s).
+[ RUN      ] parseEmpty
+[       OK ] parseEmpty
+[ RUN      ] parseInt
+[       OK ] parseInt
+[ RUN      ] parseLexError
+[       OK ] parseLexError
+[ RUN      ] parseError
+[       OK ] parseError
+[ RUN      ] parseSimpleExpression
+[       OK ] parseSimpleExpression
+[ RUN      ] parseAddMultplyExpression
+[       OK ] parseAddMultplyExpression
+[ RUN      ] parseParentheticalExpression
+[       OK ] parseParentheticalExpression
+[ RUN      ] parseParentheticalAddMultplyExpression
+[       OK ] parseParentheticalAddMultplyExpression
+[ RUN      ] parseIsolatedOperator
+[       OK ] parseIsolatedOperator
+[ RUN      ] parseUnaryChainedOperator
+[       OK ] parseUnaryChainedOperator
+[==========] Parser: 10 test(s) run.
+[  PASSED  ] 10 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"debugger-parser" end time: Oct 28 17:38 CST
+"debugger-parser" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/28 Testing: script-classes
+16/28 Test: script-classes
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-script-classes"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"script-classes" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] mScriptClasses: Running 17 test(s).
+[ RUN      ] testALayout
+[       OK ] testALayout
+[ RUN      ] testASignatures
+[       OK ] testASignatures
+[ RUN      ] testAGet
+[       OK ] testAGet
+[ RUN      ] testASet
+[       OK ] testASet
+[ RUN      ] testAStatic
+[       OK ] testAStatic
+[ RUN      ] testADynamic
+[       OK ] testADynamic
+[ RUN      ] testBLayout
+[       OK ] testBLayout
+[ RUN      ] testBGet
+[       OK ] testBGet
+[ RUN      ] testBSet
+[       OK ] testBSet
+[ RUN      ] testDLayout
+[       OK ] testDLayout
+[ RUN      ] testDGet
+[       OK ] testDGet
+[ RUN      ] testDSet
+[       OK ] testDSet
+[ RUN      ] testEGet
+[       OK ] testEGet
+[ RUN      ] testFDeinit
+[       OK ] testFDeinit
+[ RUN      ] testGSet
+[       OK ] testGSet
+[ RUN      ] testHSet
+[       OK ] testHSet
+[ RUN      ] testOverloadsBasic
+[       OK ] testOverloadsBasic
+[==========] mScriptClasses: 17 test(s) run.
+[  PASSED  ] 17 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"script-classes" end time: Oct 28 17:38 CST
+"script-classes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/28 Testing: script-types
+17/28 Test: script-types
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-script-types"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"script-types" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] mScript: Running 37 test(s).
+[ RUN      ] voidArgs
+[       OK ] voidArgs
+[ RUN      ] voidFunc
+[       OK ] voidFunc
+[ RUN      ] identityFunctionS32
+[       OK ] identityFunctionS32
+[ RUN      ] identityFunctionS64
+[       OK ] identityFunctionS64
+[ RUN      ] identityFunctionF32
+[       OK ] identityFunctionF32
+[ RUN      ] identityFunctionStruct
+[       OK ] identityFunctionStruct
+[ RUN      ] addS32
+[       OK ] addS32
+[ RUN      ] addS32Defaults
+[       OK ] addS32Defaults
+[ RUN      ] subS32
+[       OK ] subS32
+[ RUN      ] wrongArgCountLo
+[       OK ] wrongArgCountLo
+[ RUN      ] wrongArgCountHi
+[       OK ] wrongArgCountHi
+[ RUN      ] wrongArgType
+[       OK ] wrongArgType
+[ RUN      ] wrongPopType
+[       OK ] wrongPopType
+[ RUN      ] wrongPopSize
+[       OK ] wrongPopSize
+[ RUN      ] wrongConst
+[       OK ] wrongConst
+[ RUN      ] coerceToFloat
+[       OK ] coerceToFloat
+[ RUN      ] coerceFromFloat
+[       OK ] coerceFromFloat
+[ RUN      ] coerceToBool
+[       OK ] coerceToBool
+[ RUN      ] coerceFromBool
+[       OK ] coerceFromBool
+[ RUN      ] coerceNarrow
+[       OK ] coerceNarrow
+[ RUN      ] coerceWiden
+[       OK ] coerceWiden
+[ RUN      ] s32Equality
+[       OK ] s32Equality
+[ RUN      ] s64Equality
+[       OK ] s64Equality
+[ RUN      ] u32Equality
+[       OK ] u32Equality
+[ RUN      ] u64Equality
+[       OK ] u64Equality
+[ RUN      ] f32Equality
+[       OK ] f32Equality
+[ RUN      ] f64Equality
+[       OK ] f64Equality
+[ RUN      ] boolEquality
+[       OK ] boolEquality
+[ RUN      ] stringEquality
+[       OK ] stringEquality
+[ RUN      ] hashTableBasic
+[       OK ] hashTableBasic
+[ RUN      ] hashTableString
+[       OK ] hashTableString
+[ RUN      ] stringIsHello
+[       OK ] stringIsHello
+[ RUN      ] stringIsNotHello
+[       OK ] stringIsNotHello
+[ RUN      ] invokeList
+[       OK ] invokeList
+[ RUN      ] nullString
+[       OK ] nullString
+[ RUN      ] nullStruct
+[       OK ] nullStruct
+[ RUN      ] lambda0
+[       OK ] lambda0
+[==========] mScript: 37 test(s) run.
+[  PASSED  ] 37 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"script-types" end time: Oct 28 17:38 CST
+"script-types" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/28 Testing: util-circle-buffer
+18/28 Test: util-circle-buffer
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-util-circle-buffer"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"util-circle-buffer" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] mCircleBuffer: Running 21 test(s).
+[ RUN      ] basicCircle
+[       OK ] basicCircle
+[ RUN      ] basicAlignment16
+[       OK ] basicAlignment16
+[ RUN      ] basicAlignment32
+[       OK ] basicAlignment32
+[ RUN      ] capacity
+[       OK ] capacity
+[ RUN      ] overflowWrap8
+[       OK ] overflowWrap8
+[ RUN      ] overflowWrap16
+[       OK ] overflowWrap16
+[ RUN      ] overflowWrap16_1
+[       OK ] overflowWrap16_1
+[ RUN      ] overflowWrap32
+[       OK ] overflowWrap32
+[ RUN      ] overflowWrap32_1
+[       OK ] overflowWrap32_1
+[ RUN      ] overflowWrap32_2
+[       OK ] overflowWrap32_2
+[ RUN      ] overflowWrap32_3
+[       OK ] overflowWrap32_3
+[ RUN      ] weirdSize16
+[       OK ] weirdSize16
+[ RUN      ] weirdSize32_1
+[       OK ] weirdSize32_1
+[ RUN      ] weirdSize32_2
+[       OK ] weirdSize32_2
+[ RUN      ] weirdSize32_3
+[       OK ] weirdSize32_3
+[ RUN      ] overCapacity16
+[       OK ] overCapacity16
+[ RUN      ] writeLenCapacity
+[       OK ] writeLenCapacity
+[ RUN      ] writeTruncate
+[       OK ] writeTruncate
+[ RUN      ] dumpBasic
+[       OK ] dumpBasic
+[ RUN      ] dumpOffset
+[       OK ] dumpOffset
+[ RUN      ] dumpOffsetWrap
+[       OK ] dumpOffsetWrap
+[==========] mCircleBuffer: 21 test(s) run.
+[  PASSED  ] 21 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"util-circle-buffer" end time: Oct 28 17:38 CST
+"util-circle-buffer" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/28 Testing: util-color
+19/28 Test: util-color
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-util-color"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"util-color" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] Color: Running 9 test(s).
+[ RUN      ] channelSwap32
+[       OK ] channelSwap32
+[ RUN      ] channelSwap16
+[       OK ] channelSwap16
+[ RUN      ] convertQuantizeOpaque
+[       OK ] convertQuantizeOpaque
+[ RUN      ] convertQuantizeTransparent
+[       OK ] convertQuantizeTransparent
+[ RUN      ] convertToOpaque
+[       OK ] convertToOpaque
+[ RUN      ] convertToAlpha
+[       OK ] convertToAlpha
+[ RUN      ] convertFromGray
+[       OK ] convertFromGray
+[ RUN      ] convertToGray
+[       OK ] convertToGray
+[ RUN      ] alphaBlendARGB8
+[       OK ] alphaBlendARGB8
+[==========] Color: 9 test(s) run.
+[  PASSED  ] 9 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"util-color" end time: Oct 28 17:38 CST
+"util-color" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/28 Testing: util-geometry
+20/28 Test: util-geometry
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-util-geometry"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"util-geometry" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] Geometry: Running 55 test(s).
+[ RUN      ] unionRectOrigin
+[       OK ] unionRectOrigin
+[ RUN      ] unionRectOriginSwapped
+[       OK ] unionRectOriginSwapped
+[ RUN      ] unionRectNonOrigin
+[       OK ] unionRectNonOrigin
+[ RUN      ] unionRectOverlapping
+[       OK ] unionRectOverlapping
+[ RUN      ] unionRectSubRect
+[       OK ] unionRectSubRect
+[ RUN      ] unionRectNegativeOrigin
+[       OK ] unionRectNegativeOrigin
+[ RUN      ] intersectRectNWNo
+[       OK ] intersectRectNWNo
+[ RUN      ] intersectRectNWCorner0
+[       OK ] intersectRectNWCorner0
+[ RUN      ] intersectRectNWCorner1
+[       OK ] intersectRectNWCorner1
+[ RUN      ] intersectRectNWFullN
+[       OK ] intersectRectNWFullN
+[ RUN      ] intersectRectNWFullW
+[       OK ] intersectRectNWFullW
+[ RUN      ] intersectRectNNo
+[       OK ] intersectRectNNo
+[ RUN      ] intersectRectN0
+[       OK ] intersectRectN0
+[ RUN      ] intersectRectN1
+[       OK ] intersectRectN1
+[ RUN      ] intersectRectNFull
+[       OK ] intersectRectNFull
+[ RUN      ] intersectRectNENo
+[       OK ] intersectRectNENo
+[ RUN      ] intersectRectNECorner0
+[       OK ] intersectRectNECorner0
+[ RUN      ] intersectRectNECorner1
+[       OK ] intersectRectNECorner1
+[ RUN      ] intersectRectNEFullN
+[       OK ] intersectRectNEFullN
+[ RUN      ] intersectRectNEFullE
+[       OK ] intersectRectNEFullE
+[ RUN      ] intersectRectWNo
+[       OK ] intersectRectWNo
+[ RUN      ] intersectRectW0
+[       OK ] intersectRectW0
+[ RUN      ] intersectRectW1
+[       OK ] intersectRectW1
+[ RUN      ] intersectRectWFull
+[       OK ] intersectRectWFull
+[ RUN      ] intersectRectSWNo
+[       OK ] intersectRectSWNo
+[ RUN      ] intersectRectSWCorner0
+[       OK ] intersectRectSWCorner0
+[ RUN      ] intersectRectSWCorner1
+[       OK ] intersectRectSWCorner1
+[ RUN      ] intersectRectSWFullS
+[       OK ] intersectRectSWFullS
+[ RUN      ] intersectRectSWFullW
+[       OK ] intersectRectSWFullW
+[ RUN      ] intersectRectSNo
+[       OK ] intersectRectSNo
+[ RUN      ] intersectRectS0
+[       OK ] intersectRectS0
+[ RUN      ] intersectRectS1
+[       OK ] intersectRectS1
+[ RUN      ] intersectRectSFull
+[       OK ] intersectRectSFull
+[ RUN      ] intersectRectSENo
+[       OK ] intersectRectSENo
+[ RUN      ] intersectRectSECorner0
+[       OK ] intersectRectSECorner0
+[ RUN      ] intersectRectSECorner1
+[       OK ] intersectRectSECorner1
+[ RUN      ] intersectRectSEFullS
+[       OK ] intersectRectSEFullS
+[ RUN      ] intersectRectSEFullE
+[       OK ] intersectRectSEFullE
+[ RUN      ] intersectRectENo
+[       OK ] intersectRectENo
+[ RUN      ] intersectRectE0
+[       OK ] intersectRectE0
+[ RUN      ] intersectRectE1
+[       OK ] intersectRectE1
+[ RUN      ] intersectRectEFull
+[       OK ] intersectRectEFull
+[ RUN      ] intersectRectInternalNE
+[       OK ] intersectRectInternalNE
+[ RUN      ] intersectRectInternalNW
+[       OK ] intersectRectInternalNW
+[ RUN      ] intersectRectInternalSE
+[       OK ] intersectRectInternalSE
+[ RUN      ] intersectRectInternalSW
+[       OK ] intersectRectInternalSW
+[ RUN      ] intersectRectInternalN
+[       OK ] intersectRectInternalN
+[ RUN      ] intersectRectInternalW
+[       OK ] intersectRectInternalW
+[ RUN      ] intersectRectInternalS
+[       OK ] intersectRectInternalS
+[ RUN      ] intersectRectInternalE
+[       OK ] intersectRectInternalE
+[ RUN      ] intersectRectEqual
+[       OK ] intersectRectEqual
+[ RUN      ] centerRectBasic
+[       OK ] centerRectBasic
+[ RUN      ] centerRectRoundDown
+[       OK ] centerRectRoundDown
+[ RUN      ] centerRectRoundDown2
+[       OK ] centerRectRoundDown2
+[ RUN      ] centerRectOffset
+[       OK ] centerRectOffset
+[==========] Geometry: 55 test(s) run.
+[  PASSED  ] 55 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"util-geometry" end time: Oct 28 17:38 CST
+"util-geometry" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/28 Testing: util-hash
+21/28 Test: util-hash
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-util-hash"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"util-hash" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] Hashes: Running 13 test(s).
+[ RUN      ] emptyCrc32
+[       OK ] emptyCrc32
+[ RUN      ] newlineCrc32
+[       OK ] newlineCrc32
+[ RUN      ] helloWorldCrc32
+[       OK ] helloWorldCrc32
+[ RUN      ] emptyMd5
+[       OK ] emptyMd5
+[ RUN      ] newlineMd5
+[       OK ] newlineMd5
+[ RUN      ] fullBlockMd5
+[       OK ] fullBlockMd5
+[ RUN      ] overflowBlockMd5
+[       OK ] overflowBlockMd5
+[ RUN      ] twoBlockMd5
+[       OK ] twoBlockMd5
+[ RUN      ] emptySha1
+[       OK ] emptySha1
+[ RUN      ] newlineSha1
+[       OK ] newlineSha1
+[ RUN      ] fullBlockSha1
+[       OK ] fullBlockSha1
+[ RUN      ] overflowBlockSha1
+[       OK ] overflowBlockSha1
+[ RUN      ] twoBlockSha1
+[       OK ] twoBlockSha1
+[==========] Hashes: 13 test(s) run.
+[  PASSED  ] 13 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"util-hash" end time: Oct 28 17:38 CST
+"util-hash" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/28 Testing: util-image
+22/28 Test: util-image
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-util-image"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"util-image" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] Image: Running 39 test(s).
+[ RUN      ] zeroDim
+[       OK ] zeroDim
+[ RUN      ] pitchRead
+[       OK ] pitchRead
+[ RUN      ] strideRead
+[       OK ] strideRead
+[ RUN      ] oobRead
+[       OK ] oobRead
+[ RUN      ] pitchWrite
+[       OK ] pitchWrite
+[ RUN      ] strideWrite
+[       OK ] strideWrite
+[ RUN      ] oobWrite
+[       OK ] oobWrite
+[ RUN      ] paletteAccess
+[       OK ] paletteAccess
+[ RUN      ] loadPng24
+[       OK ] loadPng24
+[ RUN      ] loadPng32
+[       OK ] loadPng32
+[ RUN      ] loadPngPalette
+[       OK ] loadPngPalette
+[ RUN      ] savePngNative
+[       OK ] savePngNative
+[ RUN      ] savePngNonNative
+[       OK ] savePngNonNative
+[ RUN      ] savePngRoundTrip
+[       OK ] savePngRoundTrip
+[ RUN      ] savePngL8
+[       OK ] savePngL8
+[ RUN      ] savePngPal8
+[       OK ] savePngPal8
+[ RUN      ] convert1x1
+[       OK ] convert1x1
+[ RUN      ] convert2x1
+[       OK ] convert2x1
+[ RUN      ] convert1x2
+[       OK ] convert1x2
+[ RUN      ] convert2x2
+[       OK ] convert2x2
+[ RUN      ] blitBoundaries
+[       OK ] blitBoundaries
+[ RUN      ] painterFillRectangle
+[       OK ] painterFillRectangle
+[ RUN      ] painterFillRectangleBlend
+[       OK ] painterFillRectangleBlend
+[ RUN      ] painterFillRectangleInvalid
+[       OK ] painterFillRectangleInvalid
+[ RUN      ] painterStrokeRectangle
+[       OK ] painterStrokeRectangle
+[ RUN      ] painterStrokeRectangleWidth
+[       OK ] painterStrokeRectangleWidth
+[ RUN      ] painterStrokeRectangleBlend
+[       OK ] painterStrokeRectangleBlend
+[ RUN      ] painterStrokeRectangleInvalid
+[       OK ] painterStrokeRectangleInvalid
+[ RUN      ] painterDrawRectangle
+[       OK ] painterDrawRectangle
+[ RUN      ] painterDrawLineOctants
+[       OK ] painterDrawLineOctants
+[ RUN      ] painterDrawLineWidth
+[       OK ] painterDrawLineWidth
+[ RUN      ] painterDrawLineBlend
+[       OK ] painterDrawLineBlend
+[ RUN      ] painterDrawCircleArea
+[       OK ] painterDrawCircleArea
+[ RUN      ] painterDrawCircleCircumference
+[       OK ] painterDrawCircleCircumference
+[ RUN      ] painterDrawCircleOffset
+[       OK ] painterDrawCircleOffset
+[ RUN      ] painterDrawCircleBlend
+[       OK ] painterDrawCircleBlend
+[ RUN      ] painterDrawCircleInvalid
+[       OK ] painterDrawCircleInvalid
+[ RUN      ] painterDrawMask
+[       OK ] painterDrawMask
+[ RUN      ] painterDrawMaskBlend
+[       OK ] painterDrawMaskBlend
+[==========] Image: 39 test(s) run.
+[  PASSED  ] 39 test(s).
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"util-image" end time: Oct 28 17:38 CST
+"util-image" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/28 Testing: util-sfo
+23/28 Test: util-sfo
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-util-sfo"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"util-sfo" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] Sfo: Running 1 test(s).
+[ RUN      ] defaultSfo
+[       OK ] defaultSfo
+[==========] Sfo: 1 test(s) run.
+[  PASSED  ] 1 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"util-sfo" end time: Oct 28 17:38 CST
+"util-sfo" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/28 Testing: util-string-parser
+24/28 Test: util-string-parser
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-util-string-parser"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"util-string-parser" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] StringParser: Running 17 test(s).
+[ RUN      ] nullString
+[       OK ] nullString
+[ RUN      ] emptyString
+[       OK ] emptyString
+[ RUN      ] emptyString2
+[       OK ] emptyString2
+[ RUN      ] plainString
+[       OK ] plainString
+[ RUN      ] plainString2
+[       OK ] plainString2
+[ RUN      ] leadingString
+[       OK ] leadingString
+[ RUN      ] trailingString
+[       OK ] trailingString
+[ RUN      ] backslashString
+[       OK ] backslashString
+[ RUN      ] doubleBackslashString
+[       OK ] doubleBackslashString
+[ RUN      ] escapeCharsString
+[       OK ] escapeCharsString
+[ RUN      ] invalidEscapeCharString
+[       OK ] invalidEscapeCharString
+[ RUN      ] overflowString
+[       OK ] overflowString
+[ RUN      ] unclosedString
+[       OK ] unclosedString
+[ RUN      ] unclosedString2
+[       OK ] unclosedString2
+[ RUN      ] unclosedBackslashString
+[       OK ] unclosedBackslashString
+[ RUN      ] unclosedBackslashString2
+[       OK ] unclosedBackslashString2
+[ RUN      ] highCharacterString
+[       OK ] highCharacterString
+[==========] StringParser: 17 test(s) run.
+[  PASSED  ] 17 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"util-string-parser" end time: Oct 28 17:38 CST
+"util-string-parser" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/28 Testing: util-string-utf8
+25/28 Test: util-string-utf8
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-util-string-utf8"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"util-string-utf8" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] StringUTF8: Running 5 test(s).
+[ RUN      ] strlenASCII
+[       OK ] strlenASCII
+[ RUN      ] strlenMultibyte
+[       OK ] strlenMultibyte
+[ RUN      ] strlenDegenerate
+[       OK ] strlenDegenerate
+[ RUN      ] roundtrip
+[       OK ] roundtrip
+[ RUN      ] roundtripUnpadded
+[       OK ] roundtripUnpadded
+[==========] StringUTF8: 5 test(s) run.
+[  PASSED  ] 5 test(s).
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"util-string-utf8" end time: Oct 28 17:38 CST
+"util-string-utf8" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/28 Testing: util-table
+26/28 Test: util-table
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-util-table"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"util-table" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] Table: Running 6 test(s).
+[ RUN      ] basic
+[       OK ] basic
+[ RUN      ] iterator
+[       OK ] iterator
+[ RUN      ] iteratorLookup
+[       OK ] iteratorLookup
+[ RUN      ] hash
+[       OK ] hash
+[ RUN      ] hashIterator
+[       OK ] hashIterator
+[ RUN      ] hashIteratorLookup
+[       OK ] hashIteratorLookup
+[==========] Table: 6 test(s) run.
+[  PASSED  ] 6 test(s).
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"util-table" end time: Oct 28 17:38 CST
+"util-table" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/28 Testing: util-text-codec
+27/28 Test: util-text-codec
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-util-text-codec"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"util-text-codec" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] TextCodec: Running 11 test(s).
+[ RUN      ] emptyCodec
+[       OK ] emptyCodec
+[ RUN      ] singleEntry
+[       OK ] singleEntry
+[ RUN      ] singleEntryReverse
+[       OK ] singleEntryReverse
+[ RUN      ] twoEntry
+[       OK ] twoEntry
+[ RUN      ] longEntry
+[       OK ] longEntry
+[ RUN      ] longEntryReverse
+[       OK ] longEntryReverse
+[ RUN      ] overlappingEntry
+[       OK ] overlappingEntry
+[ RUN      ] overlappingEntryReverse
+[       OK ] overlappingEntryReverse
+[ RUN      ] raggedEntry
+[       OK ] raggedEntry
+[ RUN      ] controlCodes
+[       OK ] controlCodes
+[ RUN      ] nullBytes
+[       OK ] nullBytes
+[==========] TextCodec: 11 test(s) run.
+[  PASSED  ] 11 test(s).
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"util-text-codec" end time: Oct 28 17:38 CST
+"util-text-codec" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/28 Testing: util-vfs
+28/28 Test: util-vfs
+Command: "/workspace/scratch/f3fa4914dddb/gbax-build/test/test-util-vfs"
+Directory: /workspace/scratch/f3fa4914dddb/gbax-build/test
+"util-vfs" start time: Oct 28 17:38 CST
+Output:
+----------------------------------------------------------
+[==========] VFS: Running 17 test(s).
+[ RUN      ] openNullPathR
+[       OK ] openNullPathR
+[ RUN      ] openNullPathW
+[       OK ] openNullPathW
+[ RUN      ] openNullPathCreate
+[       OK ] openNullPathCreate
+[ RUN      ] openNullPathWCreate
+[       OK ] openNullPathWCreate
+[ RUN      ] openNullMem0
+[       OK ] openNullMem0
+[ RUN      ] openNullMemNonzero
+[       OK ] openNullMemNonzero
+[ RUN      ] openNullConstMem0
+[       OK ] openNullConstMem0
+[ RUN      ] openNullConstMemNonzero
+[       OK ] openNullConstMemNonzero
+[ RUN      ] openNullMemChunk0
+[       OK ] openNullMemChunk0
+[ RUN      ] openNonNullMemChunk0
+[       OK ] openNonNullMemChunk0
+[ RUN      ] openNullMemChunkNonzero
+[       OK ] openNullMemChunkNonzero
+[ RUN      ] resizeMem
+[       OK ] resizeMem
+[ RUN      ] resizeConstMem
+[       OK ] resizeConstMem
+[ RUN      ] resizeMemChunk
+[       OK ] resizeMemChunk
+[ RUN      ] mapMem
+[       OK ] mapMem
+[ RUN      ] mapConstMem
+[       OK ] mapConstMem
+[ RUN      ] mapMemChunk
+[       OK ] mapMemChunk
+[==========] VFS: 17 test(s) run.
+[  PASSED  ] 17 test(s).
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"util-vfs" end time: Oct 28 17:38 CST
+"util-vfs" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 28 17:38 CST

@@ -1,0 +1,56 @@
+Internal ctest changing into directory: /workspace/scratch/f3fa4914dddb/release-build
+Test project /workspace/scratch/f3fa4914dddb/release-build
+      Start  1: platform-qt-launcherdata
+ 1/25 Test  #1: platform-qt-launcherdata .........   Passed    0.04 sec
+      Start  2: platform-qt-library
+ 2/25 Test  #2: platform-qt-library ..............   Passed    0.06 sec
+      Start  3: platform-qt-player
+ 3/25 Test  #3: platform-qt-player ...............   Passed   38.89 sec
+      Start  4: platform-qt-spanset
+ 4/25 Test  #4: platform-qt-spanset ..............   Passed    0.02 sec
+      Start  5: core-core
+ 5/25 Test  #5: core-core ........................   Passed    0.01 sec
+      Start  6: gb-core
+ 6/25 Test  #6: gb-core ..........................   Passed    0.01 sec
+      Start  7: gb-gbx
+ 7/25 Test  #7: gb-gbx ...........................   Passed    0.01 sec
+      Start  8: gb-mbc
+ 8/25 Test  #8: gb-mbc ...........................   Passed    0.01 sec
+      Start  9: gb-memory
+ 9/25 Test  #9: gb-memory ........................   Passed    0.02 sec
+      Start 10: gb-rtc
+10/25 Test #10: gb-rtc ...........................   Passed    0.02 sec
+      Start 11: gba-cheats
+11/25 Test #11: gba-cheats .......................   Passed    0.02 sec
+      Start 12: gba-core
+12/25 Test #12: gba-core .........................   Passed    0.01 sec
+      Start 13: debugger-lexer
+13/25 Test #13: debugger-lexer ...................   Passed    0.00 sec
+      Start 14: debugger-parser
+14/25 Test #14: debugger-parser ..................   Passed    0.01 sec
+      Start 15: util-circle-buffer
+15/25 Test #15: util-circle-buffer ...............   Passed    0.00 sec
+      Start 16: util-color
+16/25 Test #16: util-color .......................   Passed    0.00 sec
+      Start 17: util-geometry
+17/25 Test #17: util-geometry ....................   Passed    0.00 sec
+      Start 18: util-hash
+18/25 Test #18: util-hash ........................   Passed    0.00 sec
+      Start 19: util-image
+19/25 Test #19: util-image .......................   Passed    0.01 sec
+      Start 20: util-sfo
+20/25 Test #20: util-sfo .........................   Passed    0.00 sec
+      Start 21: util-string-parser
+21/25 Test #21: util-string-parser ...............   Passed    0.00 sec
+      Start 22: util-string-utf8
+22/25 Test #22: util-string-utf8 .................   Passed    0.05 sec
+      Start 23: util-table
+23/25 Test #23: util-table .......................   Passed    0.01 sec
+      Start 24: util-text-codec
+24/25 Test #24: util-text-codec ..................   Passed    0.00 sec
+      Start 25: util-vfs
+25/25 Test #25: util-vfs .........................   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 25
+
+Total Test time (real) =  39.21 sec

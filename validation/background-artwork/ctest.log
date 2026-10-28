@@ -1,0 +1,62 @@
+Internal ctest changing into directory: /workspace/scratch/f3fa4914dddb/gbax-build
+Test project /workspace/scratch/f3fa4914dddb/gbax-build
+      Start  1: platform-qt-autoscript
+ 1/28 Test  #1: platform-qt-autoscript ...........   Passed    0.02 sec
+      Start  2: platform-qt-launcherdata
+ 2/28 Test  #2: platform-qt-launcherdata .........   Passed    0.01 sec
+      Start  3: platform-qt-library
+ 3/28 Test  #3: platform-qt-library ..............   Passed    0.03 sec
+      Start  4: platform-qt-player
+ 4/28 Test  #4: platform-qt-player ...............   Passed   10.66 sec
+      Start  5: platform-qt-spanset
+ 5/28 Test  #5: platform-qt-spanset ..............   Passed    0.02 sec
+      Start  6: core-core
+ 6/28 Test  #6: core-core ........................   Passed    0.00 sec
+      Start  7: gb-core
+ 7/28 Test  #7: gb-core ..........................   Passed    0.00 sec
+      Start  8: gb-gbx
+ 8/28 Test  #8: gb-gbx ...........................   Passed    0.00 sec
+      Start  9: gb-mbc
+ 9/28 Test  #9: gb-mbc ...........................   Passed    0.00 sec
+      Start 10: gb-memory
+10/28 Test #10: gb-memory ........................   Passed    0.01 sec
+      Start 11: gb-rtc
+11/28 Test #11: gb-rtc ...........................   Passed    0.00 sec
+      Start 12: gba-cheats
+12/28 Test #12: gba-cheats .......................   Passed    0.01 sec
+      Start 13: gba-core
+13/28 Test #13: gba-core .........................   Passed    0.00 sec
+      Start 14: debugger-lexer
+14/28 Test #14: debugger-lexer ...................   Passed    0.00 sec
+      Start 15: debugger-parser
+15/28 Test #15: debugger-parser ..................   Passed    0.00 sec
+      Start 16: script-classes
+16/28 Test #16: script-classes ...................   Passed    0.00 sec
+      Start 17: script-types
+17/28 Test #17: script-types .....................   Passed    0.00 sec
+      Start 18: util-circle-buffer
+18/28 Test #18: util-circle-buffer ...............   Passed    0.00 sec
+      Start 19: util-color
+19/28 Test #19: util-color .......................   Passed    0.00 sec
+      Start 20: util-geometry
+20/28 Test #20: util-geometry ....................   Passed    0.00 sec
+      Start 21: util-hash
+21/28 Test #21: util-hash ........................   Passed    0.00 sec
+      Start 22: util-image
+22/28 Test #22: util-image .......................   Passed    0.02 sec
+      Start 23: util-sfo
+23/28 Test #23: util-sfo .........................   Passed    0.00 sec
+      Start 24: util-string-parser
+24/28 Test #24: util-string-parser ...............   Passed    0.00 sec
+      Start 25: util-string-utf8
+25/28 Test #25: util-string-utf8 .................   Passed    0.06 sec
+      Start 26: util-table
+26/28 Test #26: util-table .......................   Passed    0.01 sec
+      Start 27: util-text-codec
+27/28 Test #27: util-text-codec ..................   Passed    0.00 sec
+      Start 28: util-vfs
+28/28 Test #28: util-vfs .........................   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 28
+
+Total Test time (real) =  10.90 sec

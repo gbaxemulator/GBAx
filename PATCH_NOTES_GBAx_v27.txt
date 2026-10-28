@@ -1,0 +1,17 @@
+Patched launcher polish pass
+
+Files changed:
+- src/platform/qt/LauncherWindow.h
+- src/platform/qt/LauncherWindow.cpp
+
+What was added/changed:
+- Theme selector in Settings: Purple, Dark Blue, Retro Green, Neon
+- Performance Mode toggle stored in Qt settings (group: gbax)
+- Theme-aware styling and accent color handling
+- Theme-aware branded fallback artwork cards
+- Reduced-effect backdrops when Performance Mode is enabled
+- Stronger selected/hovered cover highlighting
+- Controller/gamepad Start shortcut opens Settings
+- Controller/gamepad Down from bottom row moves focus to Play button
+- Basic controller navigation for new appearance controls
+- Details panel typography tightened up slightly

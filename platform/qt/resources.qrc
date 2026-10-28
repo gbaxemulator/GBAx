@@ -1,0 +1,59 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+ <qresource>
+  <file>../../../res/gbax-1024.png</file>
+  <file>../../../res/gbax-256.png</file>
+  <file>../../../res/gbax-48.png</file>
+  <file>../../../res/keymap.qpic</file>
+  <file>../../../res/patrons.txt</file>
+  <file>../../../res/no-cam.png</file>
+  <file>../../../res/gb-icon-256.png</file>
+  <file>../../../res/gb-icon-128.png</file>
+  <file>../../../res/gb-icon-32.png</file>
+  <file>../../../res/gb-icon-24.png</file>
+  <file>../../../res/gb-icon-16.png</file>
+  <file>../../../res/gb-icon.svg</file>
+  <file>../../../res/gbc-icon-256.png</file>
+  <file>../../../res/gbc-icon-128.png</file>
+  <file>../../../res/gbc-icon-32.png</file>
+  <file>../../../res/gbc-icon-24.png</file>
+  <file>../../../res/gbc-icon-16.png</file>
+  <file>../../../res/gbc-icon.svg</file>
+  <file>../../../res/sgb-icon-256.png</file>
+  <file>../../../res/sgb-icon-128.png</file>
+  <file>../../../res/sgb-icon-32.png</file>
+  <file>../../../res/sgb-icon-24.png</file>
+  <file>../../../res/sgb-icon-16.png</file>
+  <file>../../../res/sgb-icon.svg</file>
+  <file>../../../res/gba-icon-256.png</file>
+  <file>../../../res/gba-icon-128.png</file>
+  <file>../../../res/gba-icon-32.png</file>
+  <file>../../../res/gba-icon-24.png</file>
+  <file>../../../res/gba-icon-16.png</file>
+  <file>../../../res/gba-icon.svg</file>
+  <file alias="res/nointro.dat">../../../res/nointro.dat</file>
+  <file alias="res/gba_catalog_us.json">../../../res/gba_catalog_us.json</file>
+   <file alias="gbax-logo.png">../../../res/gbax-logo.png</file>
+  <file>../../../res/gbax-logo-tagline.png</file>
+  <file>../../../res/gbax-logo-launcher.png</file>
+</qresource>
+
+ <!-- Small inline icons used by the launcher sidebar (fallbacks for Windows) -->
+ <qresource prefix="/icons">
+  <file alias="folder.png">icons/folder.png</file>
+  <file alias="star.png">icons/star.png</file>
+  <file alias="star-filled.png">icons/star-filled.png</file>
+  <file alias="history.png">icons/history.png</file>
+  <file alias="gamepad.png">icons/gamepad.png</file>
+  <file alias="play.png">icons/play.png</file>
+  <file alias="gear.png">icons/gear.png</file>
+ </qresource>
+ <qresource prefix="/exe">
+  <file alias="exe4/chip-names.txt">../../../res/exe4/chip-names.txt</file>
+  <file alias="exe4/placeholder.png">../../../res/exe4/placeholder.png</file>
+  <file alias="exe5/chip-names.txt">../../../res/exe5/chip-names.txt</file>
+  <file alias="exe5/placeholder.png">../../../res/exe5/placeholder.png</file>
+  <file alias="exe6/chip-names.txt">../../../res/exe6/chip-names.txt</file>
+  <file alias="exe6/placeholder.png">../../../res/exe6/placeholder.png</file>
+</qresource>
+</RCC>
