@@ -20,6 +20,10 @@ app="$stage/GBAx.app"
 python3 "$root/tools/release/release.py" resources "$app/Contents/Resources" \
   --notices "$(brew --prefix sdl2)" --notices "$(brew --prefix libzip)" \
   --notices "$(brew --prefix libpng)" --notices "$(brew --prefix sqlite)" --notices "$(brew --prefix zlib)"
+# macdeployqt deliberately omits offscreen. Copy it before deployment so its
+# framework paths and code signature are processed with the rest of the bundle.
+mkdir -p "$app/Contents/PlugIns/platforms"
+ditto "$QT_ROOT_DIR/plugins/platforms/libqoffscreen.dylib" "$app/Contents/PlugIns/platforms/libqoffscreen.dylib"
 deploy_options=(-always-overwrite)
 suffix='-unsigned'
 if [[ "${GBAX_SIGN_MACOS:-false}" == true ]]; then
