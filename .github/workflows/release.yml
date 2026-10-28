@@ -1,0 +1,154 @@
+name: Build desktop downloads
+
+on:
+  workflow_dispatch:
+    inputs:
+      sign_macos:
+        description: Sign and notarize both Mac packages (requires Apple secrets)
+        type: boolean
+        default: false
+      create_draft_release:
+        description: Also attach all downloads to a draft GitHub release
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: desktop-release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  linux:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Install Linux dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends cmake ninja-build pkg-config \
+            qt6-base-dev qt6-tools-dev-tools libqt6opengl6-dev qt6-svg-dev qt6-wayland \
+            libsdl2-dev libzip-dev zipcmp zipmerge ziptool libpng-dev libsqlite3-dev \
+            libepoxy-dev zlib1g-dev libcmocka-dev libssl-dev patchelf file desktop-file-utils
+      - name: Build and test
+        run: |
+          cmake -S . -B build-release-linux -G Ninja -C tools/release/profile.cmake \
+            -DCMAKE_INSTALL_PREFIX=/usr -DDATADIR=../share/gbax -DBUILD_SUITE=ON -DBUILD_QT_UI_TESTS=ON
+          cmake --build build-release-linux --parallel 2
+          QT_QPA_PLATFORM=offscreen SDL_AUDIODRIVER=dummy ctest --test-dir build-release-linux --output-on-failure
+          python3 -m unittest discover -s tools/release/tests -v
+      - name: Package AppImage and test deployed runtime
+        run: bash tools/release/build-linux.sh
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: desktop-linux-x86_64
+          path: dist/
+          if-no-files-found: error
+      - name: Upload test diagnostics
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: linux-test-logs
+          path: build-release-linux/Testing/Temporary/
+
+  windows:
+    runs-on: windows-2022
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Check out pinned vcpkg
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: microsoft/vcpkg
+          ref: 15b12b99a227d51e21c86dffd40385439eac87a0
+          path: .tools/vcpkg
+      - uses: jurplel/install-qt-action@3c4505ac6c534648cc14edb23c1eacf9c412498f # v4.2.0
+        with:
+          version: '6.10.2'
+          arch: win64_msvc2022_64
+          cache: true
+      - name: Install native dependencies
+        shell: pwsh
+        run: |
+          & ./.tools/vcpkg/bootstrap-vcpkg.bat -disableMetrics
+          if ($LASTEXITCODE -ne 0) { throw 'vcpkg bootstrap failed' }
+          & ./.tools/vcpkg/vcpkg.exe install sdl2:x64-windows libzip:x64-windows libpng:x64-windows sqlite3:x64-windows zlib:x64-windows
+          if ($LASTEXITCODE -ne 0) { throw 'vcpkg dependency installation failed' }
+      - name: Build, package and test Windows ZIP
+        shell: pwsh
+        run: ./tools/release/build-windows.ps1 -QtRoot $env:QT_ROOT_DIR -VcpkgRoot "$env:GITHUB_WORKSPACE/.tools/vcpkg"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: desktop-windows-x64
+          path: dist/
+          if-no-files-found: error
+
+  macos:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: macos-15
+            architecture: arm64
+          - runner: macos-15-intel
+            architecture: x86_64
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: jurplel/install-qt-action@3c4505ac6c534648cc14edb23c1eacf9c412498f
+        with:
+          version: '6.10.2'
+          arch: clang_64
+          cache: true
+      - name: Install native dependencies
+        run: brew install cmake ninja pkg-config sdl2 libzip libpng sqlite zlib
+      - name: Build, package and test Mac DMG
+        env:
+          GBAX_SIGN_MACOS: ${{ inputs.sign_macos }}
+          APPLE_CERTIFICATE_P12_BASE64: ${{ secrets.APPLE_CERTIFICATE_P12_BASE64 }}
+          APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+          APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_APP_PASSWORD: ${{ secrets.APPLE_APP_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+        run: bash tools/release/build-macos.sh
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: desktop-macos-${{ matrix.architecture }}
+          path: dist/
+          if-no-files-found: error
+
+  assemble:
+    needs: [linux, windows, macos]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          pattern: desktop-*
+          path: dist
+          merge-multiple: true
+      - name: Add matching source, checksums and download manifest
+        run: |
+          version="$(python3 tools/release/release.py version)"
+          git archive --format=zip --prefix=gbax/ --output="dist/GBAx-$version-source.zip" HEAD
+          python3 tools/release/release.py manifest dist
+          python3 tools/release/verify-release.py dist
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: GBAx-website-downloads
+          path: dist/
+          if-no-files-found: error
+      - name: Create draft release (never publishes automatically)
+        if: inputs.create_draft_release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="$(python3 tools/release/release.py version)"
+          gh release create "v$version" --draft --target "$GITHUB_SHA" \
+            --title "GBAx $version" --notes-file tools/release/RELEASE_TEMPLATE.md dist/*
