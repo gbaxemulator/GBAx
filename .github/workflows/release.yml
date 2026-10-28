@@ -131,6 +131,13 @@ jobs:
           name: desktop-macos-${{ matrix.architecture }}
           path: dist/
           if-no-files-found: error
+      - name: Upload Mac runtime diagnostics
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: macos-${{ matrix.architecture }}-diagnostics
+          path: dist/*package-check*
+          if-no-files-found: ignore
 
   assemble:
     needs: [linux, windows, macos]

@@ -20,10 +20,6 @@ app="$stage/GBAx.app"
 python3 "$root/tools/release/release.py" resources "$app/Contents/Resources" \
   --notices "$(brew --prefix sdl2)" --notices "$(brew --prefix libzip)" \
   --notices "$(brew --prefix libpng)" --notices "$(brew --prefix sqlite)" --notices "$(brew --prefix zlib)"
-# macdeployqt deliberately omits offscreen. Copy it before deployment so its
-# framework paths and code signature are processed with the rest of the bundle.
-mkdir -p "$app/Contents/PlugIns/platforms"
-ditto "$QT_ROOT_DIR/plugins/platforms/libqoffscreen.dylib" "$app/Contents/PlugIns/platforms/libqoffscreen.dylib"
 deploy_options=(-always-overwrite -codesign=-)
 suffix='-unsigned'
 if [[ "${GBAX_SIGN_MACOS:-false}" == true ]]; then
@@ -71,9 +67,8 @@ python3 -c 'import subprocess,sys; subprocess.run(sys.argv[1:], check=True, time
 if [[ -z "$suffix" ]]; then codesign --verify --deep --strict --verbose=2 "$app"; fi
 # Check the actual deployed bundle before turning it into a disk image.
 echo "Checking the deployed Mac runtime (2 minute limit)"
-python3 -c 'import subprocess,sys; subprocess.run(sys.argv[1:], check=True, timeout=120)' \
-  env -u QT_PLUGIN_PATH -u DYLD_LIBRARY_PATH QT_QPA_PLATFORM=offscreen \
-  "$app/Contents/MacOS/GBAx" --package-check | tee "$dist/macos-$arch-package-check.json"
+python3 "$root/tools/release/check-macos-runtime.py" \
+  "$app/Contents/MacOS/GBAx" "$dist/macos-$arch-package-check.json"
 lipo -verify_arch "$arch" "$app/Contents/MacOS/GBAx"
 ln -s /Applications "$stage/Applications"
 version="$(python3 "$root/tools/release/release.py" version)"

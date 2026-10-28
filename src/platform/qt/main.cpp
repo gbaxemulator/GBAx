@@ -627,12 +627,15 @@ int main(int argc, char* argv[]) {
 
 	const bool packageCheck = configController.getArgvOption(QStringLiteral("package-check")).toBool();
 	if (packageCheck) configController.setOption("updateAutoCheck", false);
+	if (packageCheck) fprintf(stderr, "Package check: initializing application\n");
 	GBAApp application(argc, argv, &configController);
 	if (packageCheck) {
 		// Run on the deployed application, with no ROMs, network calls or welcome
 		// dialog. This verifies dependencies that --version cannot exercise.
 		QJsonObject checks;
+		fprintf(stderr, "Package check: checking TLS backend\n");
 		checks.insert("tls", QSslSocket::supportsSsl());
+		fprintf(stderr, "Package check: checking image formats and resources\n");
 		const auto formats = QImageReader::supportedImageFormats();
 		checks.insert("png", formats.contains("png"));
 		checks.insert("jpeg", formats.contains("jpeg") || formats.contains("jpg"));
@@ -653,6 +656,8 @@ int main(int argc, char* argv[]) {
 		QJsonObject report{{"checks", checks}, {"passed", success}, {"qt", qVersion()}, {"version", projectVersion}};
 		const QByteArray json = QJsonDocument(report).toJson(QJsonDocument::Compact);
 		fprintf(stdout, "%s\n", json.constData());
+		fflush(stdout);
+		fprintf(stderr, "Package check: finished, shutting down\n");
 		return success ? 0 : 2;
 	}
 	QPalette startupPalette;
