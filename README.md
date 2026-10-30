@@ -1,270 +1,231 @@
-GBAx
-====
-
-GBAx is an emulator for running Game Boy Advance games. It aims to be faster and more accurate than many existing Game Boy Advance emulators, as well as adding features that other emulators lack. It also supports Game Boy and Game Boy Color games.
-
-Up-to-date news and downloads can be found at [gbax-emulator.com](https://gbax-emulator.com/).
-
-[![Build status](https://buildbot.gbax-emulator.com/badges/build-win32.svg)](https://buildbot.gbax-emulator.com)
-[![Translation status](https://hosted.weblate.org/widgets/gbax/-/svg-badge.svg)](https://hosted.weblate.org/engage/gbax)
-
-Features
---------
-
-- Highly accurate Game Boy Advance hardware support[<sup>[1]</sup>](#missing).
-- Game Boy/Game Boy Color hardware support.
-- Fast emulation. Known to run at full speed even on low end hardware, such as netbooks.
-- Qt and SDL ports for a heavy-weight and a light-weight frontend.
-- Local (same computer) link cable support.
-- Save type detection, even for flash memory size[<sup>[2]</sup>](#flashdetect).
-- Support for cartridges with motion sensors and rumble (only usable with game controllers).
-- Real-time clock support, even without configuration.
-- Solar sensor support for Boktai games.
-- Game Boy Camera and Game Boy Printer support.
-- A built-in BIOS implementation, and ability to load external BIOS files.
-- Scripting support using Lua.
-- Turbo/fast-forward support by holding Tab.
-- Rewind by holding Backquote.
-- Frameskip, configurable up to 10.
-- Screenshot support.
-- Cheat code support.
-- 9 savestate slots. Savestates are also viewable as screenshots.
-- Video, GIF, WebP, and APNG recording.
-- e-Reader support.
-- Remappable controls for both keyboards and gamepads.
-- Loading from ZIP and 7z files.
-- IPS, UPS and BPS patch support.
-- Game debugging via a command-line interface and GDB remote support, compatible with Ghidra and IDA Pro.
-- Configurable emulation rewinding.
-- Support for loading and exporting GameShark and Action Replay snapshots.
-- Cores available for RetroArch/Libretro and OpenEmu.
-- Community-provided translations for several languages via [Weblate](https://hosted.weblate.org/engage/gbax).
-- Many, many smaller things.
-
-#### Game Boy mappers
-
-The following mappers are fully supported:
-
-- MBC1
-- MBC1M
-- MBC2
-- MBC3
-- MBC3+RTC
-- MBC30
-- MBC5
-- MBC5+Rumble
-- MBC7
-- M161
-- Wisdom Tree (unlicensed)
-- NT "old type" 1 and 2 (unlicensed multicart)
-- NT "new type" (unlicensed MBC5-like)
-- Pokémon Jade/Diamond (unlicensed)
-- Sachen MMC1 (unlicensed)
-
-The following mappers are partially supported:
-
-- MBC6 (missing flash memory write support)
-- MMM01
-- Pocket Cam
-- TAMA5 (incomplete RTC support)
-- HuC-1 (missing IR support)
-- HuC-3 (missing IR support)
-- Sachen MMC2 (missing alternate wiring support)
-- BBD (missing logo switching)
-- Hitek (missing logo switching)
-- GGB-81 (missing logo switching)
-- Li Cheng (missing logo switching)
-- Sintax (missing logo switching)
-
-### Planned features
-
-- Networked multiplayer link cable support.
-- Dolphin/JOY bus link cable support.
-- MP2k audio mixing, for higher quality sound than hardware.
-- Re-recording support for tool-assist runs.
-- A comprehensive debug suite.
-- Wireless adapter support.
-
-Supported Platforms
--------------------
-
-- Windows 7 or newer
-- OS X 10.9 (Mavericks)[<sup>[3]</sup>](#osxver) or newer
-- Linux
-- FreeBSD
-- Nintendo 3DS
-- Nintendo Switch
-- Wii
-- PlayStation Vita
+<p align="center">
+  <a href="https://gbax-emulator.com/">
+    <img src="https://gbax-emulator.com/wp-content/uploads/2026/10/cropped-gbax-logo-official-2.webp" alt="GBAx — Game Boy Advance Emulator" width="460">
+  </a>
+</p>
 
-Other Unix-like platforms, such as OpenBSD, are known to work as well, but are untested and not fully supported.
+<h1 align="center">GBAx — Game Boy Advance Emulator</h1>
 
-### System requirements
+<p align="center">
+  <strong>Classic handheld. Modern experience.</strong>
+</p>
 
-Requirements are minimal. Any computer that can run Windows Vista or newer should be able to handle emulation. Support for OpenGL 1.1 or newer is also required, with OpenGL 3.2 or newer for shaders and advanced features.
+<p align="center">
+  <a href="https://gbax-emulator.com/">Website</a> ·
+  <a href="https://github.com/emucores/GBAx/releases">Downloads</a> ·
+  <a href="https://gbax-emulator.com/docs/">Documentation</a> ·
+  <a href="https://github.com/emucores/GBAx/issues">Report a bug</a>
+</p>
 
-Downloads
----------
+---
 
-Downloads can be found on the official website, in the [Downloads][downloads] section. The source code can be found on [GitHub][source].
+## About GBAx
 
-Controls
---------
+GBAx combines Game Boy Advance emulation with a modern desktop launcher, a visual game library and controller-friendly navigation.
 
-Controls are configurable in the settings menu. Many game controllers should be automatically mapped by default. The default keyboard controls are as follows:
+Built on the **mGBA emulation foundation**, GBAx brings established Game Boy Advance, Game Boy and Game Boy Color emulation together with tools for organising your collection, downloading cover artwork and getting back into your favourite games.
 
-- **A**: X
-- **B**: Z
-- **L**: A
-- **R**: S
-- **Start**: Enter
-- **Select**: Backspace
+Developed under **[EmuCores](https://github.com/emucores)**.
 
-Compiling
----------
+> **GBAx 2.0.0 Preview 1 is available now.**
+> Download desktop packages for Windows, Linux and macOS. This is a preview release, and feedback from real-world gameplay and controller testing helps guide development.
 
-Compiling requires using CMake 3.1 or newer. GCC, Clang, and Visual Studio 2019 are known to work for compiling GBAx.
+## Screenshots
 
-#### Docker building
+<p align="center">
+  <img src="https://gbax-emulator.com/wp-content/plugins/gbax-website/assets/img/library.webp" alt="GBAx launcher displaying its visual game library" width="960">
+</p>
 
-The recommended way to build for most platforms is to use Docker. Several Docker images are provided that contain the requisite toolchain and dependencies for building GBAx across several platforms.
+## Features
 
-Note: If you are on an older Windows system before Windows 10, you may need to configure your Docker to use VirtualBox shared folders to correctly map your current `gbax` checkout directory to the Docker image's working directory. (See issue [#1985](https://gbax-emulator.com/i/1985) for details.)
+### Your collection, organised
 
-To use a Docker image to build GBAx, simply run the following command while in the root of an GBAx checkout:
+- **Visual game library** with cover artwork and searchable game titles.
+- **Automatic artwork downloads** that run in the background while you browse.
+- **Favourites** for quick access to the games you love.
+- **Recently played games** to help you pick up where you left off.
+- **ROM folder management** with library scanning and optional subfolder scanning.
 
-	docker run --rm -it -v ${PWD}:/home/gbax/src gbax/windows:w32
+### A comfortable desktop experience
 
-After starting the Docker container, it will produce a `build-win32` directory with the build products. Replace `gbax/windows:w32` with another Docker image for other platforms, which will produce a corresponding other directory. The following Docker images available on Docker Hub:
+- **Controller-friendly navigation** for browsing your library and launching games.
+- **In-game quick menu** for common actions without returning to the launcher.
+- **Save and load states** to return to a saved moment.
+- **Fullscreen support** for an uninterrupted view of your game.
+- **Configurable keyboard and controller mappings**.
+- **Graphics and audio settings** to adjust your setup.
+- **Accent themes and launcher performance mode**.
+- **Screenshot capture**.
 
-- gbax/3ds
-- gbax/switch
-- gbax/ubuntu:xenial
-- gbax/ubuntu:bionic
-- gbax/ubuntu:focal
-- gbax/ubuntu:groovy
-- gbax/vita
-- gbax/wii
-- gbax/windows:w32
-- gbax/windows:w64
+### An established emulation foundation
 
-If you want to speed up the build process, consider adding the flag `-e MAKEFLAGS=-jN` to do a parallel build for GBAx with `N` number of CPU cores.
+- Game Boy Advance, Game Boy and Game Boy Color emulation through the mGBA-based core.
+- Hardware emulation covering CPU execution, memory, video, audio and timing.
+- ZIP and 7z archive support in the current preview packages.
 
-#### *nix building
+Feature availability depends on the build. See the release notes for the configuration shipped with each version.
 
-To use CMake to build on a Unix-based system, the recommended commands are as follows:
+## Downloads
 
-	mkdir build
-	cd build
-	cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
-	make
-	sudo make install
+Download GBAx from:
 
-This will build and install GBAx into `/usr/bin` and `/usr/lib`. Dependencies that are installed will be automatically detected, and features that are disabled if the dependencies are not found will be shown after running the `cmake` command after warnings about being unable to find them.
+- **[GitHub Releases](https://github.com/emucores/GBAx/releases)**
+- **[GBAx Downloads](https://gbax-emulator.com/downloads/)**
 
-If you are on macOS, the steps are a little different. Assuming you are using the homebrew package manager, the recommended commands to obtain the dependencies and build are:
+### Preview 1 packages
 
-	brew install cmake ffmpeg libzip qt5 sdl2 libedit lua pkg-config
-	mkdir build
-	cd build
-	cmake -DCMAKE_PREFIX_PATH=`brew --prefix qt5` ..
-	make
+| Platform | Package | Requirements |
+| --- | --- | --- |
+| Windows | ZIP archive | Windows 10/11, x64 |
+| Linux | AppImage | x86_64; Ubuntu 24.04 or compatible glibc 2.39+ |
+| macOS — Apple Silicon | DMG | macOS 15+, ARM64 |
+| macOS — Intel | DMG | macOS 15+, x86_64 |
 
-Note that you should not do a `make install` on macOS, as it will not work properly.
+### Windows
 
-#### Windows developer building
+Extract the complete ZIP archive, then run `GBAx.exe`.
 
-##### MSYS2
+Keep the bundled DLLs and folders alongside the executable.
 
-To build on Windows for development, using MSYS2 is recommended. Follow the installation steps found on their [website](https://msys2.github.io). Make sure you're running the 32-bit version ("MSYS2 MinGW 32-bit") (or the 64-bit version "MSYS2 MinGW 64-bit" if you want to build for x86_64) and run this additional command (including the braces) to install the needed dependencies (please note that this involves downloading over 1100MiB of packages, so it will take a long time):
+### Linux
 
-	pacman -Sy --needed base-devel git ${MINGW_PACKAGE_PREFIX}-{cmake,ffmpeg,gcc,gdb,libelf,libepoxy,libzip,lua,pkgconf,qt5,SDL2,ntldd-git}
+Mark the AppImage executable and launch it.
 
-Check out the source code by running this command:
+If FUSE is unavailable, the package supports running with `APPIMAGE_EXTRACT_AND_RUN=1`.
 
-	git clone https://github.com/gbaxemulator/gbax.git
+### macOS
 
-Then finally build it by running these commands:
+Download the package matching your processor and drag GBAx into Applications.
 
-	mkdir -p gbax/build
-	cd gbax/build
-	cmake .. -G "MSYS Makefiles"
-	make -j$(nproc --ignore=1)
+The preview packages are ad-hoc signed test builds. They are not Apple Developer ID signed or notarized, so macOS may block them or display a security warning.
 
-Please note that this build of GBAx for Windows is not suitable for distribution, due to the scattering of DLLs it needs to run, but is perfect for development. However, if distributing such a build is desired (e.g. for testing on machines that don't have the MSYS2 environment installed), running `cpack -G ZIP` will prepare a zip file with all of the necessary DLLs.
+### Release contents
 
-##### Visual Studio
+Release assets include matching source code, dependency notices, package-check reports and `SHA256SUMS.txt`.
 
-To build using Visual Studio is a similarly complicated setup. To begin you will need to install [vcpkg](https://github.com/Microsoft/vcpkg). After installing vcpkg you will need to install several additional packages:
+Games and BIOS files are not included in the executable packages.
 
-    vcpkg install ffmpeg[vpx,x264] libepoxy libpng libzip lua sdl2 sqlite3
+## Getting started
 
-Note that this installation won't support hardware accelerated video encoding on Nvidia hardware. If you care about this, you'll need to install CUDA beforehand, and then substitute `ffmpeg[vpx,x264,nvcodec]` into the previous command.
+1. Download the package for your operating system.
+2. Extract or install it and launch GBAx.
+3. Choose the folder containing your game files.
+4. Scan your library and let cover artwork load.
+5. Configure your keyboard or controller in Settings.
+6. Select a game and start playing.
 
-You will also need to install Qt. Unfortunately due to Qt being owned and run by an ailing company as opposed to a reasonable organization there is no longer an offline open source edition installer for the latest version, so you'll need to either fall back to an [old version installer](https://download.qt.io/archive/qt/5.12/5.12.9/qt-opensource-windows-x86-5.12.9.exe) (which wants you to create an otherwise-useless account, but you can bypass temporarily setting an invalid proxy or otherwise disabling networking), use the online installer (which requires an account regardless), or use vcpkg to build it (slowly). None of these are great options. For the installer you'll want to install the applicable MSVC versions. Note that the offline installers do not support MSVC 2019. For vcpkg you'll want to install it as such, which will take quite a while, especially on quad core or less computers:
+For a walkthrough, see the **[Getting Started guide](https://gbax-emulator.com/docs/getting-started/)**.
 
-    vcpkg install qt5-base qt5-multimedia
+Back up your save files before changing builds. Save states may not be interchangeable between versions or different emulators.
 
-Next, open Visual Studio, select Clone Repository, and enter `https://github.com/gbaxemulator/gbax.git`. When Visual Studio is done cloning, go to File > CMake and open the CMakeLists.txt file at the root of the checked out repository. From there, GBAx can be developed in Visual Studio similarly to other Visual Studio CMake projects.
+## Documentation
 
-#### Toolchain building
+Explore the **[GBAx Documentation](https://gbax-emulator.com/docs/)** for setup instructions, troubleshooting and explanations of how the emulator works.
 
-If you have devkitARM (for 3DS), devkitPPC (for Wii), devkitA64 (for Switch), or vitasdk (for PS Vita), you can use the following commands for building:
+Topics include:
 
-	mkdir build
-	cd build
-	cmake -DCMAKE_TOOLCHAIN_FILE=../src/platform/3ds/CMakeToolchain.txt ..
-	make
+- Getting started and managing your library.
+- Controller setup and launcher navigation.
+- Saves, save states and backups.
+- Launcher architecture and artwork management.
+- CPU instruction execution.
+- Memory and the system bus.
+- Video rendering, backgrounds and sprites.
+- Audio channels and timing.
+- Timers, DMA and interrupts.
+- Cartridges, input and peripherals.
+- Building GBAx from source.
 
-Replace the `-DCMAKE_TOOLCHAIN_FILE` parameter for the following platforms:
+### How GBAx works
 
-- 3DS: `../src/platform/3ds/CMakeToolchain.txt`
-- Switch: `../src/platform/switch/CMakeToolchain.txt`
-- Vita: `../src/platform/psp2/CMakeToolchain.vitasdk`
-- Wii: `../src/platform/wii/CMakeToolchain.txt`
+GBAx uses mGBA's hardware emulation implementation to reproduce the behaviour of the original systems.
 
-### Dependencies
+The core handles instruction execution, memory access, video, audio and hardware timing. GBAx's launcher and library features provide the surrounding desktop experience: finding games, managing artwork, navigating with a controller and moving between the library and gameplay.
 
-GBAx has no hard dependencies, however, the following optional dependencies are required for specific features. The features will be disabled if the dependencies can't be found.
+Read more in the **[hardware documentation](https://gbax-emulator.com/docs/)**.
 
-- Qt 5: for the GUI frontend. Qt Multimedia or SDL are required for audio.
-- SDL: for a more basic frontend and gamepad support in the Qt frontend. SDL 2 is recommended, but 1.2 is supported.
-- zlib and libpng: for screenshot support and savestate-in-PNG support.
-- libedit: for command-line debugger support.
-- ffmpeg or libav: for video, GIF, WebP, and APNG recording.
-- libzip or zlib: for loading ROMs stored in zip files.
-- SQLite3: for game databases.
-- libelf: for ELF loading.
-- Lua: for scripting.
-- json-c: for the scripting `storage` API.
+## Build from source
 
-SQLite3, libpng, and zlib are included with the emulator, so they do not need to be externally compiled first.
+Clone the repository:
 
-Footnotes
----------
+```bash
+git clone https://github.com/emucores/GBAx.git
+cd GBAx
+```
 
-<a name="missing">[1]</a> Currently missing features are
+Follow the guide for your platform:
 
-- OBJ window for modes 3, 4 and 5 ([Bug #5](https://gbax-emulator.com/b/5))
+- **[Windows build guide](https://gbax-emulator.com/docs/build-windows/)**
+- **[macOS build guide](https://gbax-emulator.com/docs/build-macos/)**
+- **[Linux build guide](https://gbax-emulator.com/docs/build-linux/)**
 
-<a name="flashdetect">[2]</a> Flash memory size detection does not work in some cases. These can be configured at runtime, but filing a bug is recommended if such a case is encountered.
+For a build matching a published package, use its release tag or matching source archive. The default branch may contain changes made after the release.
 
-<a name="osxver">[3]</a> 10.9 is only needed for the Qt port. It may be possible to build or run the Qt port on 10.7 or older, but this is not officially supported. The SDL port is known to work on 10.5, and may work on older.
+## Browser play
 
-[downloads]: https://gbax-emulator.com/downloads.html
-[source]: https://github.com/gbaxemulator/gbax/
+The **[GBAx website](https://gbax-emulator.com/)** also provides browser play through **EmulatorJS**.
 
-Copyright
----------
+Browser play is separate from the desktop application. Features, controls and save behaviour may differ between the two.
 
-GBAx is Copyright © 2013 – 2026 Jeffrey Pfau. It is distributed under the [Mozilla Public License version 2.0](https://www.mozilla.org/MPL/2.0/). A copy of the license is available in the distributed LICENSE file.
+## Preview status
 
-GBAx contains the following third-party libraries:
+GBAx 2.0.0 Preview 1 provides native desktop packages for Windows, Linux and macOS.
 
-- [inih](https://github.com/benhoyt/inih), which is copyright © 2009 – 2020 Ben Hoyt and used under a BSD 3-clause license.
-- [LZMA SDK](http://www.7-zip.org/sdk.html), which is public domain.
-- [MurmurHash3](https://github.com/aappleby/smhasher) implementation by Austin Appleby, which is public domain.
-- [getopt for MSVC](https://github.com/skandhurkat/Getopt-for-Visual-Studio/), which is public domain.
-- [SQLite3](https://www.sqlite.org), which is public domain.
+Automated build and package checks do not replace testing gameplay, audio, controllers, save states and fullscreen behaviour on real devices.
 
-If you are a game publisher and wish to license GBAx for commercial usage, please email [licensing@gbax-emulator.com](mailto:licensing@gbax-emulator.com) for more information.
+The following features are **disabled in the Preview 1 release profile**:
+
+- Automatic updates.
+- FFmpeg recording.
+- Lua scripting.
+- Discord presence.
+
+Check the **[release notes](https://github.com/emucores/GBAx/releases)** for the features and limitations of each build.
+
+## Report a problem
+
+Found a bug? Open an **[issue](https://github.com/emucores/GBAx/issues)** and include:
+
+- GBAx version.
+- Operating system and processor architecture.
+- Game title and region, if relevant.
+- Steps needed to reproduce the issue.
+- What you expected and what actually happened.
+- Controller model and connection type for input problems.
+- Relevant screenshots or logs, with personal information removed.
+
+Please do not attach copyrighted game files or BIOS images.
+
+## Contributing
+
+Bug fixes, documentation improvements and reproducible test reports are welcome.
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting changes. For substantial changes, open an issue first to discuss the approach.
+
+## Credits and licence
+
+GBAx is based on **[mGBA](https://mgba.io/)**, created by **Jeffrey Pfau** and developed by the mGBA contributors.
+
+Their work provides the emulation foundation on which GBAx builds its desktop experience.
+
+The inherited code includes copyright © 2013–2026 Jeffrey Pfau. Existing source-file copyright and licence notices remain applicable to their respective contributions.
+
+The repository includes the **[Mozilla Public License 2.0](LICENSE)**. Third-party components retain their own licences and notices, including:
+
+- [inih](https://github.com/benhoyt/inih) — © 2009–2020 Ben Hoyt; BSD 3-clause licence.
+- [LZMA SDK](https://www.7-zip.org/sdk.html) — public domain.
+- [MurmurHash3](https://github.com/aappleby/smhasher) — Austin Appleby; public domain.
+- [getopt for MSVC](https://github.com/skandhurkat/Getopt-for-Visual-Studio/) — public domain.
+- [SQLite](https://www.sqlite.org/) — public domain.
+
+See the source and release dependency notices for additional components and their terms.
+
+GBAx is an independent project and is not affiliated with Nintendo. Game titles, artwork and trademarks belong to their respective owners.
+
+---
+
+<p align="center">
+  <strong>GBAx — Classic handheld. Modern experience.</strong><br>
+  <a href="https://gbax-emulator.com/">gbax-emulator.com</a> ·
+  <a href="https://github.com/emucores">EmuCores</a>
+</p>
