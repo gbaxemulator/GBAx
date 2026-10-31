@@ -1,150 +1,164 @@
 <p align="center">
   <a href="https://gbax-emulator.com/">
-    <img src="https://gbax-emulator.com/wp-content/uploads/2026/10/cropped-gbax-logo-official-2.webp" alt="GBAx — Game Boy Advance Emulator" width="460">
+    <img src="https://gbax-emulator.com/wp-content/uploads/2026/10/cropped-gbax-logo-official-2.webp" alt="GBAx — Game Boy Advance Emulator" width="500">
   </a>
 </p>
 
 <h1 align="center">GBAx — Game Boy Advance Emulator</h1>
 
 <p align="center">
-  <strong>Classic handheld. Modern experience.</strong>
+  <strong>Classic Handheld. Modern Experience.</strong>
+</p>
+
+<p align="center">
+  A modern desktop emulator with a visual game library, controller-friendly navigation and convenient tools for enjoying your collection.
 </p>
 
 <p align="center">
   <a href="https://gbax-emulator.com/">Website</a> ·
   <a href="https://github.com/emucores/GBAx/releases">Downloads</a> ·
   <a href="https://gbax-emulator.com/docs/">Documentation</a> ·
-  <a href="https://github.com/emucores/GBAx/issues">Report a bug</a>
+  <a href="https://gbax-emulator.com/play-online/">Play Online</a> ·
+  <a href="https://github.com/emucores/GBAx/issues">Report an Issue</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/emucores/GBAx/releases">
+    <img src="https://img.shields.io/github/v/release/emucores/GBAx?include_prereleases&label=Release&color=9333ea" alt="Latest release">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MPL--2.0-9333ea" alt="License: MPL 2.0">
+  </a>
+  <img src="https://img.shields.io/badge/Platforms-Windows%20%7C%20macOS%20%7C%20Linux-272032" alt="Windows, macOS and Linux">
 </p>
 
 ---
 
-## About GBAx
+## Overview
 
-GBAx combines Game Boy Advance emulation with a modern desktop launcher, a visual game library and controller-friendly navigation.
+**GBAx** brings Game Boy Advance, Game Boy and Game Boy Color emulation into a desktop experience designed around your collection.
 
-Built on the **mGBA emulation foundation**, GBAx brings established Game Boy Advance, Game Boy and Game Boy Color emulation together with tools for organising your collection, downloading cover artwork and getting back into your favourite games.
+Browse cover artwork, organise favourites, revisit recently played games and launch directly from your library. Controller navigation and an in-game quick menu keep common actions within easy reach.
 
-Developed under **[EmuCores](https://github.com/emucores)**.
+GBAx is developed under **[EmuCores](https://github.com/emucores)**.
 
-> **GBAx 2.0.0 Preview 1 is available now.**
-> Download desktop packages for Windows, Linux and macOS. This is a preview release, and feedback from real-world gameplay and controller testing helps guide development.
+> **Preview Release**
+>
+> GBAx is currently available as preview software. Features and platform requirements depend on the release. Please read the release notes and back up your progress before changing builds.
 
 ## Screenshots
 
 <p align="center">
-  <img src="https://gbax-emulator.com/wp-content/plugins/gbax-website/assets/img/library.webp" alt="GBAx launcher displaying its visual game library" width="960">
+  <img src="https://gbax-emulator.com/wp-content/plugins/gbax-website/assets/img/library.webp" alt="GBAx desktop launcher showing its visual game library" width="1000">
 </p>
 
 ## Features
 
-### Your collection, organised
+### Your Collection, Organised
 
-- **Visual game library** with cover artwork and searchable game titles.
-- **Automatic artwork downloads** that run in the background while you browse.
-- **Favourites** for quick access to the games you love.
-- **Recently played games** to help you pick up where you left off.
-- **ROM folder management** with library scanning and optional subfolder scanning.
+- **Visual Game Library** — Browse games with cover artwork and searchable titles.
+- **Background Artwork Downloads** — Continue browsing while missing covers load.
+- **Favourites** — Keep frequently played games close at hand.
+- **Recently Played** — Find your recent sessions quickly.
+- **Folder Scanning** — Choose your ROM directory and optionally include subfolders.
 
-### A comfortable desktop experience
+### Built Around Playing
 
-- **Controller-friendly navigation** for browsing your library and launching games.
-- **In-game quick menu** for common actions without returning to the launcher.
-- **Save and load states** to return to a saved moment.
-- **Fullscreen support** for an uninterrupted view of your game.
-- **Configurable keyboard and controller mappings**.
-- **Graphics and audio settings** to adjust your setup.
-- **Accent themes and launcher performance mode**.
-- **Screenshot capture**.
+- **Controller-Friendly Navigation** — Browse the launcher and select games with a controller.
+- **In-Game Quick Menu** — Access common actions during gameplay.
+- **Save States** — Save and restore snapshots of your game.
+- **Fullscreen Play** — Give your games more room.
+- **Configurable Controls** — Adjust keyboard and controller mappings.
+- **Graphics and Audio Settings** — Configure presentation and sound.
+- **Screenshot Capture** — Capture moments from your games.
 
-### An established emulation foundation
+### Make It Yours
 
-- Game Boy Advance, Game Boy and Game Boy Color emulation through the mGBA-based core.
-- Hardware emulation covering CPU execution, memory, video, audio and timing.
-- ZIP and 7z archive support in the current preview packages.
+- Accent themes for the launcher.
+- Performance Mode to reduce interface effects.
+- Artwork management and library maintenance tools.
+- Separate launcher and emulator settings.
 
-Feature availability depends on the build. See the release notes for the configuration shipped with each version.
+Feature availability varies by build. The release notes describe the configuration included in each package.
 
 ## Downloads
 
-Download GBAx from:
+Get desktop builds from **[GitHub Releases](https://github.com/emucores/GBAx/releases)** or visit the **[GBAx Downloads page](https://gbax-emulator.com/downloads/)**.
 
-- **[GitHub Releases](https://github.com/emucores/GBAx/releases)**
-- **[GBAx Downloads](https://gbax-emulator.com/downloads/)**
-
-### Preview 1 packages
+### Preview 1 Packages
 
 | Platform | Package | Requirements |
 | --- | --- | --- |
-| Windows | ZIP archive | Windows 10/11, x64 |
+| Windows | ZIP | Windows 10/11, x64 |
 | Linux | AppImage | x86_64; Ubuntu 24.04 or compatible glibc 2.39+ |
 | macOS — Apple Silicon | DMG | macOS 15+, ARM64 |
 | macOS — Intel | DMG | macOS 15+, x86_64 |
 
-### Windows
+**Windows:** Extract the complete archive and launch `GBAx.exe`. Keep the included DLLs and folders alongside the executable.
 
-Extract the complete ZIP archive, then run `GBAx.exe`.
+**Linux:** Make the AppImage executable, then launch it. If FUSE is unavailable, use `APPIMAGE_EXTRACT_AND_RUN=1`.
 
-Keep the bundled DLLs and folders alongside the executable.
+**macOS:** Download the package matching your processor and move GBAx into Applications. Preview packages are ad-hoc signed and are not Developer ID signed or notarized.
 
-### Linux
+Release assets include matching source archives, dependency notices, package-check reports and checksums.
 
-Mark the AppImage executable and launch it.
+**Game ROMs and BIOS files are not included in the desktop packages.**
 
-If FUSE is unavailable, the package supports running with `APPIMAGE_EXTRACT_AND_RUN=1`.
-
-### macOS
-
-Download the package matching your processor and drag GBAx into Applications.
-
-The preview packages are ad-hoc signed test builds. They are not Apple Developer ID signed or notarized, so macOS may block them or display a security warning.
-
-### Release contents
-
-Release assets include matching source code, dependency notices, package-check reports and `SHA256SUMS.txt`.
-
-Games and BIOS files are not included in the executable packages.
-
-## Getting started
+## Getting Started
 
 1. Download the package for your operating system.
-2. Extract or install it and launch GBAx.
-3. Choose the folder containing your game files.
-4. Scan your library and let cover artwork load.
+2. Extract or install it, then launch GBAx.
+3. Select the folder containing your game files.
+4. Scan your library and allow cover artwork to load.
 5. Configure your keyboard or controller in Settings.
 6. Select a game and start playing.
 
-For a walkthrough, see the **[Getting Started guide](https://gbax-emulator.com/docs/getting-started/)**.
+See the **[Getting Started Guide](https://gbax-emulator.com/docs/getting-started/)** for more detail.
 
-Back up your save files before changing builds. Save states may not be interchangeable between versions or different emulators.
+## Saves and Progress
+
+Use the game’s own save system for regular progress and save states for convenient snapshots.
+
+Keep backups before updating, moving between devices or changing emulators. Save states can depend on the emulator version and should not be assumed interchangeable.
+
+The desktop application and browser player maintain separate storage. Moving progress between them requires an explicit export/import workflow using compatible save files.
+
+## GBAxJS — Browser Play
+
+**GBAxJS** brings the GBAx experience to your browser, with quick game loading, a personal browser library and downloadable save backups.
+
+The current preview includes:
+
+- Local game-file loading.
+- Keyboard, touch and controller mapping, subject to device support.
+- Pause, sound and fullscreen or expanded-view controls.
+- A compact mobile toolbar.
+- Hide Menus mode for a clearer gameplay view.
+- My Library with favourites, recent games and collections.
+- In-game save backups and compatible save-state backups.
+- Backup import/export and safety copies before supported restores.
+
+Browser progress is stored locally on the device. Download backups regularly, particularly before clearing browser data or switching devices.
+
+GBAxJS remains in preview, with mobile compatibility and background-session recovery under active testing.
+
+**[Explore Browser Play →](https://gbax-emulator.com/play-online/)**
 
 ## Documentation
 
-Explore the **[GBAx Documentation](https://gbax-emulator.com/docs/)** for setup instructions, troubleshooting and explanations of how the emulator works.
+The **[GBAx Documentation](https://gbax-emulator.com/docs/)** covers everyday use and the implementation behind the emulator.
 
-Topics include:
+| Topic | What You Will Find |
+| --- | --- |
+| Getting Started | Installation, setup and launching your first game |
+| Launcher and Library | Folder scanning, artwork and interface behaviour |
+| Controllers | Launcher navigation and in-game mappings |
+| Saves and Backups | Game saves, save states and progress management |
+| Hardware Emulation | CPU execution, memory, rendering, audio and timing |
+| Building From Source | Platform-specific development instructions |
+| Troubleshooting | Common setup and gameplay problems |
 
-- Getting started and managing your library.
-- Controller setup and launcher navigation.
-- Saves, save states and backups.
-- Launcher architecture and artwork management.
-- CPU instruction execution.
-- Memory and the system bus.
-- Video rendering, backgrounds and sprites.
-- Audio channels and timing.
-- Timers, DMA and interrupts.
-- Cartridges, input and peripherals.
-- Building GBAx from source.
-
-### How GBAx works
-
-GBAx uses mGBA's hardware emulation implementation to reproduce the behaviour of the original systems.
-
-The core handles instruction execution, memory access, video, audio and hardware timing. GBAx's launcher and library features provide the surrounding desktop experience: finding games, managing artwork, navigating with a controller and moving between the library and gameplay.
-
-Read more in the **[hardware documentation](https://gbax-emulator.com/docs/)**.
-
-## Build from source
+## Building From Source
 
 Clone the repository:
 
@@ -153,79 +167,62 @@ git clone https://github.com/emucores/GBAx.git
 cd GBAx
 ```
 
-Follow the guide for your platform:
+Follow the instructions for your platform:
 
-- **[Windows build guide](https://gbax-emulator.com/docs/build-windows/)**
-- **[macOS build guide](https://gbax-emulator.com/docs/build-macos/)**
-- **[Linux build guide](https://gbax-emulator.com/docs/build-linux/)**
+- **[Windows Build Guide](https://gbax-emulator.com/docs/build-windows/)**
+- **[macOS Build Guide](https://gbax-emulator.com/docs/build-macos/)**
+- **[Linux Build Guide](https://gbax-emulator.com/docs/build-linux/)**
 
-For a build matching a published package, use its release tag or matching source archive. The default branch may contain changes made after the release.
+See [RELEASE_BUILD.md](RELEASE_BUILD.md) for repository-specific release build instructions.
 
-## Browser play
+Dependencies and build options vary by platform. Use the guide matching the version you intend to build.
 
-The **[GBAx website](https://gbax-emulator.com/)** also provides browser play through **EmulatorJS**.
+## Reporting Issues
 
-Browser play is separate from the desktop application. Features, controls and save behaviour may differ between the two.
+Please report reproducible problems through **[GitHub Issues](https://github.com/emucores/GBAx/issues)**.
 
-## Preview status
+Include:
 
-GBAx 2.0.0 Preview 1 provides native desktop packages for Windows, Linux and macOS.
-
-Automated build and package checks do not replace testing gameplay, audio, controllers, save states and fullscreen behaviour on real devices.
-
-The following features are **disabled in the Preview 1 release profile**:
-
-- Automatic updates.
-- FFmpeg recording.
-- Lua scripting.
-- Discord presence.
-
-Check the **[release notes](https://github.com/emucores/GBAx/releases)** for the features and limitations of each build.
-
-## Report a problem
-
-Found a bug? Open an **[issue](https://github.com/emucores/GBAx/issues)** and include:
-
-- GBAx version.
+- GBAx version and package name.
 - Operating system and processor architecture.
-- Game title and region, if relevant.
-- Steps needed to reproduce the issue.
-- What you expected and what actually happened.
-- Controller model and connection type for input problems.
-- Relevant screenshots or logs, with personal information removed.
+- Game title, region and revision, where relevant.
+- Steps to reproduce the problem.
+- Expected behaviour and what actually happened.
+- Controller model and connection type for input issues.
+- Relevant logs or screenshots.
 
-Please do not attach copyrighted game files or BIOS images.
+For browser-player issues, also include the browser version, device model and whether the problem occurs in embedded or expanded view.
+
+Do not attach commercial ROMs, BIOS files or personal information.
 
 ## Contributing
 
-Bug fixes, documentation improvements and reproducible test reports are welcome.
+Contributions are welcome, including bug reports, documentation improvements, compatibility testing and code changes.
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting changes. For substantial changes, open an issue first to discuss the approach.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a pull request. For substantial changes, open an issue first to discuss the approach.
 
-## Credits and licence
+## Technical Foundation and Credits
 
-GBAx is based on **[mGBA](https://mgba.io/)**, created by **Jeffrey Pfau** and developed by the mGBA contributors.
+GBAx builds on the **[mGBA](https://mgba.io/)** emulation foundation and its contributors’ work on Game Boy Advance, Game Boy and Game Boy Color hardware emulation.
 
-Their work provides the emulation foundation on which GBAx builds its desktop experience.
+The desktop application uses Qt-based frontend components alongside GBAx’s launcher and library features.
 
-The inherited code includes copyright © 2013–2026 Jeffrey Pfau. Existing source-file copyright and licence notices remain applicable to their respective contributions.
+The current GBAxJS preview integrates **[EmulatorJS](https://emulatorjs.org/)** with an mGBA WebAssembly core. GBAxJS provides the surrounding player interface, library integration and backup workflow.
 
-The repository includes the **[Mozilla Public License 2.0](LICENSE)**. Third-party components retain their own licences and notices, including:
+We acknowledge the upstream developers, maintainers, researchers and contributors whose work makes these projects possible. Upstream components retain their respective licenses and notices.
 
-- [inih](https://github.com/benhoyt/inih) — © 2009–2020 Ben Hoyt; BSD 3-clause licence.
-- [LZMA SDK](https://www.7-zip.org/sdk.html) — public domain.
-- [MurmurHash3](https://github.com/aappleby/smhasher) — Austin Appleby; public domain.
-- [getopt for MSVC](https://github.com/skandhurkat/Getopt-for-Visual-Studio/) — public domain.
-- [SQLite](https://www.sqlite.org/) — public domain.
+## License
 
-See the source and release dependency notices for additional components and their terms.
+This repository is distributed under the **Mozilla Public License 2.0**. See [LICENSE](LICENSE) for the full terms.
 
-GBAx is an independent project and is not affiliated with Nintendo. Game titles, artwork and trademarks belong to their respective owners.
+Third-party dependencies and browser-runtime components are governed by their own licenses. Consult their accompanying notices and source repositories.
+
+GBAx is an independent project and is not affiliated with or endorsed by Nintendo. Product names and trademarks belong to their respective owners.
 
 ---
 
 <p align="center">
-  <strong>GBAx — Classic handheld. Modern experience.</strong><br>
-  <a href="https://gbax-emulator.com/">gbax-emulator.com</a> ·
-  <a href="https://github.com/emucores">EmuCores</a>
+  <strong>GBAx — Your Games. Your Library. Your Way to Play.</strong>
+  <br>
+  Developed under <a href="https://github.com/emucores">EmuCores</a>
 </p>
